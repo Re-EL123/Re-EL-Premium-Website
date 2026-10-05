@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Re-EL Branding & Technologies — Technology that moves businesses forward.</title>
+<meta name="description" content="Re-EL designs, develops and supports digital solutions — software, web, automation, integrations and AI — that transform ideas into scalable technology for businesses." />
+<meta name="theme-color" content="#0A1224" />
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="manifest" href="manifest.webmanifest" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Re-EL Branding & Technologies" />
+<meta property="og:title" content="Re-EL — Technology that moves businesses forward." />
+<meta property="og:description" content="Software, web, automation, integrations and AI for growing businesses." />
+<meta property="og:image" content="assets/img/og-image.svg" />
+<meta property="og:url" content="https://www.re-el.co.za" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Re-EL Branding & Technologies",
+  "url": "https://www.re-el.co.za",
+  "email": "info@re-el.co.za",
+  "slogan": "Technology that moves businesses forward.",
+  "sameAs": []
+}
+</script>
+</head>
+<body>
+
+<!-- ================= LOADER ================= -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-mark">RE-EL</div>
+    <div class="loader-sub">TECHNOLOGY SYSTEM</div>
+    <div class="loader-lines">
+      <div class="loader-line"><span>BRAND</span><span class="dots">.........</span><span class="status">OK</span></div>
+      <div class="loader-line"><span>SYSTEM</span><span class="dots">........</span><span class="status">OK</span></div>
+      <div class="loader-line"><span>SERVICES</span><span class="dots">......</span><span class="status">OK</span></div>
+      <div class="loader-line"><span>NETWORK</span><span class="dots">.......</span><span class="status">OK</span></div>
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <div class="loader-percent">0%</div>
+  </div>
+</div>
+
+<!-- ================= CUSTOM CURSOR (desktop) ================= -->
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" aria-label="Re-EL Home">
+      <svg viewBox="0 0 100 100" class="scarab-mark"><use href="#scarab-svg"></use></svg>
+      <span>RE-EL</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services" data-hover>Services</a>
+      <a href="#solutions" data-hover>Solutions</a>
+      <a href="#work" data-hover>Work</a>
+      <a href="#about" data-hover>About</a>
+      <a href="#process" data-hover>Process</a>
+      <a href="#contact" data-hover>Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta" data-hover>Start a Project</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile">
+    <a href="#services">Services</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <p>Let's build something.</p>
+    <a href="mailto:info@re-el.co.za">info@re-el.co.za</a>
+  </div>
+</div>
+
+<main id="home">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-label="Introduction">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow" data-reveal>RE-EL BRANDING & TECHNOLOGIES</p>
+      <h1 class="hero-title">
+        <span class="line" data-reveal>Technology that</span>
+        <span class="line" data-reveal>moves businesses</span>
+        <span class="line" data-reveal><em class="word-cycle" id="wordCycle">forward</em>.</span>
+      </h1>
+      <p class="hero-sub" data-reveal>
+        We design, build and support digital solutions that help businesses
+        operate smarter, connect better and grow faster.
+      </p>
+      <div class="hero-cta" data-reveal>
+        <a href="#contact" class="btn btn-primary" data-hover>Start a Project</a>
+        <a href="#work" class="btn btn-ghost" data-hover>Explore Our Work</a>
+      </div>
+    </div>
+
+    <div class="hero-status" data-reveal>
+      <div class="hero-status-title">RE-EL TECHNOLOGY SYSTEM</div>
+      <div class="hero-status-row">
+        <span class="status-dot"></span> ONLINE
+        <span class="status-sep">/</span>
+        <span>SOFTWARE</span><span class="status-sep">·</span>
+        <span>WEB</span><span class="status-sep">·</span>
+        <span>AUTOMATION</span><span class="status-sep">·</span>
+        <span>INTEGRATION</span><span class="status-sep">·</span>
+        <span>SUPPORT</span>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ================= WHAT WE BUILD ================= -->
+  <section class="section" id="solutions">
+    <div class="container">
+      <p class="eyebrow" data-reveal>WHAT WE BUILD</p>
+      <h2 class="section-title" data-reveal>From idea to infrastructure.</h2>
+
+      <div class="build-grid">
+        <div class="build-card" data-reveal>
+          <span class="build-index">01</span>
+          <h3>Software</h3>
+          <ul>
+            <li>Web applications</li>
+            <li>Business systems</li>
+            <li>Custom platforms</li>
+            <li>APIs</li>
+            <li>Databases</li>
+            <li>Automation</li>
+          </ul>
+        </div>
+        <div class="build-card" data-reveal>
+          <span class="build-index">02</span>
+          <h3>Digital</h3>
+          <ul>
+            <li>Corporate websites</li>
+            <li>Landing pages</li>
+            <li>E-commerce</li>
+            <li>UI / UX</li>
+            <li>Branding</li>
+            <li>Digital experiences</li>
+          </ul>
+        </div>
+        <div class="build-card" data-reveal>
+          <span class="build-index">03</span>
+          <h3>Technology Support</h3>
+          <ul>
+            <li>Maintenance</li>
+            <li>Bug fixing</li>
+            <li>Technical support</li>
+            <li>System optimisation</li>
+            <li>Integrations</li>
+            <li>Cloud support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES GRID ================= -->
+  <section class="section section-dark" id="services">
+    <div class="container">
+      <p class="eyebrow" data-reveal>CAPABILITIES</p>
+      <h2 class="section-title" data-reveal>A full technology engine, not a freelance gig.</h2>
+
+      <div class="services-grid">
+        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-index">01</span>
+          <i data-lucide="code-2"></i>
+          <h3>Software</h3>
+          <p>Custom platforms, business systems and internal tools built around how your company actually works.</p>
+        </article>
+        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-index">02</span>
+          <i data-lucide="globe"></i>
+          <h3>Web Development</h3>
+          <p>Corporate websites, landing pages and web apps engineered for performance and conversion.</p>
+        </article>
+        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-index">03</span>
+          <i data-lucide="workflow"></i>
+          <h3>Automation</h3>
+          <p>Remove repetitive manual work with workflow automation connected directly to your systems.</p>
+        </article>
+        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-index">04</span>
+          <i data-lucide="plug-zap"></i>
+          <h3>API & Integration</h3>
+          <p>Connect the tools you already use — payments, CRMs, databases and third-party services.</p>
+        </article>
+        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-index">05</span>
+          <i data-lucide="life-buoy"></i>
+          <h3>Tech Support</h3>
+          <p>Ongoing maintenance, bug fixing and optimisation — technology doesn't stop at deployment.</p>
+        </article>
+        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-index">06</span>
+          <i data-lucide="layout-template"></i>
+          <h3>UI / UX</h3>
+          <p>Interfaces designed around real users, built to feel fast, clear and trustworthy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECHNOLOGY CONSTELLATION ================= -->
+  <section class="section" id="stack">
+    <div class="container">
+      <p class="eyebrow" data-reveal>TECHNOLOGY</p>
+      <h2 class="section-title" data-reveal>Behind every solution is an engine.</h2>
+
+      <div class="constellation" data-reveal>
+        <svg class="constellation-lines" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <line x1="400" y1="250" x2="150" y2="80"></line>
+          <line x1="400" y1="250" x2="400" y2="60"></line>
+          <line x1="400" y1="250" x2="650" y2="80"></line>
+          <line x1="400" y1="250" x2="120" y2="300"></line>
+          <line x1="400" y1="250" x2="680" y2="300"></line>
+          <line x1="400" y1="250" x2="220" y2="430"></line>
+          <line x1="400" y1="250" x2="580" y2="430"></line>
+        </svg>
+        <div class="node node-center">RE-EL ENGINE</div>
+        <div class="node" style="left:18.75%; top:16%">Frontend</div>
+        <div class="node" style="left:50%; top:12%">Backend</div>
+        <div class="node" style="left:81.25%; top:16%">Database</div>
+        <div class="node" style="left:15%; top:60%">Cloud</div>
+        <div class="node" style="left:85%; top:60%">APIs</div>
+        <div class="node" style="left:27.5%; top:86%">Automation</div>
+        <div class="node" style="left:72.5%; top:86%">AI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED WORK ================= -->
+  <section class="section section-dark" id="work">
+    <div class="container">
+      <p class="eyebrow" data-reveal>FEATURED WORK</p>
+      <h2 class="section-title" data-reveal>Real products. Real systems.</h2>
+
+      <div class="work-list">
+        <article class="work-panel" data-reveal>
+          <span class="work-num">01</span>
+          <div class="work-visual wv-clockkit"><i data-lucide="clock-3"></i></div>
+          <div class="work-info">
+            <h3>Clock-Kit</h3>
+            <p class="work-cat">Workforce Management Platform</p>
+            <p>A workforce attendance and clocking platform built to simplify shift tracking and reporting for teams.</p>
+            <div class="work-tags"><span>JavaScript</span><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+            <a href="https://www.clock-kit.rf.gd/" target="_blank" rel="noopener" class="work-link" data-hover>View Project →</a>
+          </div>
+        </article>
+
+        <article class="work-panel" data-reveal>
+          <span class="work-num">02</span>
+          <div class="work-visual wv-rev"><i data-lucide="file-user"></i></div>
+          <div class="work-info">
+            <h3>Re-V</h3>
+            <p class="work-cat">CV & Career Technology Platform</p>
+            <p>A CV generation and career technology platform helping job seekers build professional, structured CVs.</p>
+            <div class="work-tags"><span>React</span><span>Node.js</span><span>PDF Engine</span></div>
+            <a href="#contact" class="work-link" data-hover>View Project →</a>
+          </div>
+        </article>
+
+        <article class="work-panel" data-reveal>
+          <span class="work-num">03</span>
+          <div class="work-visual wv-chatre"><i data-lucide="bot"></i></div>
+          <div class="work-info">
+            <h3>Chatre</h3>
+            <p class="work-cat">AI Productivity Platform</p>
+            <p>An AI-powered development and productivity platform designed to speed up technical workflows.</p>
+            <div class="work-tags"><span>AI</span><span>APIs</span><span>Automation</span></div>
+            <a href="#contact" class="work-link" data-hover>View Project →</a>
+          </div>
+        </article>
+
+        <article class="work-panel" data-reveal>
+          <span class="work-num">04</span>
+          <div class="work-visual wv-webstudio"><i data-lucide="layers"></i></div>
+          <div class="work-info">
+            <h3>Re-EL WebStudio</h3>
+            <p class="work-cat">Website Creation Platform</p>
+            <p>An internal platform for designing and shipping client websites faster, without losing quality.</p>
+            <div class="work-tags"><span>React</span><span>Design Systems</span><span>Automation</span></div>
+            <a href="#contact" class="work-link" data-hover>View Project →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="section" id="process">
+    <div class="container">
+      <p class="eyebrow" data-reveal>HOW WE WORK</p>
+      <h2 class="section-title" data-reveal>A clear process, from discovery to support.</h2>
+
+      <div class="timeline">
+        <div class="timeline-line"><div class="timeline-line-fill" id="timelineFill"></div></div>
+        <div class="timeline-steps">
+          <div class="t-step" data-reveal><span class="t-num">01</span><h4>Discover</h4><p>Understand the problem, goals and constraints.</p></div>
+          <div class="t-step" data-reveal><span class="t-num">02</span><h4>Plan</h4><p>Scope, architecture and timeline.</p></div>
+          <div class="t-step" data-reveal><span class="t-num">03</span><h4>Design</h4><p>Interfaces built around real users.</p></div>
+          <div class="t-step" data-reveal><span class="t-num">04</span><h4>Build</h4><p>Clean, scalable engineering.</p></div>
+          <div class="t-step" data-reveal><span class="t-num">05</span><h4>Test</h4><p>Validate before it reaches users.</p></div>
+          <div class="t-step" data-reveal><span class="t-num">06</span><h4>Deploy</h4><p>Ship with confidence.</p></div>
+          <div class="t-step" data-reveal><span class="t-num">07</span><h4>Support</h4><p>Technology doesn't stop at launch.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT / BRAND STORY ================= -->
+  <section class="section section-dark" id="about">
+    <div class="container about-grid">
+      <div data-reveal>
+        <p class="eyebrow">ABOUT RE-EL</p>
+        <h2 class="section-title">Technology. Creativity. Engineering.</h2>
+        <p class="lead">
+          Re-EL combines software engineering, web development, design, automation
+          and technical support with a distinctly South African technology identity.
+          We don't just write code — we understand the business problem first.
+        </p>
+        <p class="lead soft">
+          The scarab represents movement, transformation and the continuous creation
+          of value. Re-EL applies the same principle to technology — taking ideas,
+          challenges and processes and turning them into useful digital systems.
+        </p>
+      </div>
+      <div class="flow-diagram" data-reveal>
+        <div class="flow-step">IDEA</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">DESIGN</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">CODE</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">SYSTEM</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step flow-final">IMPACT</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AI SECTION ================= -->
+  <section class="section" id="ai">
+    <div class="container">
+      <p class="eyebrow" data-reveal>INSIDE THE STACK</p>
+      <h2 class="section-title" data-reveal>AI & Intelligent Automation</h2>
+      <p class="lead center" data-reveal>AI isn't a separate product line — it's one capability inside the Re-EL technology stack.</p>
+
+      <div class="ai-grid">
+        <div class="ai-item" data-reveal><i data-lucide="sparkles"></i><span>AI Integrations</span></div>
+        <div class="ai-item" data-reveal><i data-lucide="message-circle"></i><span>AI Assistants</span></div>
+        <div class="ai-item" data-reveal><i data-lucide="workflow"></i><span>Workflow Automation</span></div>
+        <div class="ai-item" data-reveal><i data-lucide="file-text"></i><span>Document Processing</span></div>
+        <div class="ai-item" data-reveal><i data-lucide="search"></i><span>Intelligent Search</span></div>
+        <div class="ai-item" data-reveal><i data-lucide="bot"></i><span>Chatbot Systems</span></div>
+        <div class="ai-item" data-reveal><i data-lucide="plug"></i><span>API-Connected AI</span></div>
+        <div class="ai-item" data-reveal><i data-lucide="cog"></i><span>Business Process Automation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY RE-EL ================= -->
+  <section class="section section-dark" id="why">
+    <div class="container">
+      <p class="eyebrow" data-reveal>WHY RE-EL</p>
+      <h2 class="section-title" data-reveal>Six principles behind every project.</h2>
+      <div class="why-grid">
+        <div class="why-card" data-reveal><h3>Business First</h3><p>Technology must solve an actual business problem.</p></div>
+        <div class="why-card" data-reveal><h3>Built Around You</h3><p>Solutions are designed around your workflow.</p></div>
+        <div class="why-card" data-reveal><h3>Scalable</h3><p>Build today with tomorrow in mind.</p></div>
+        <div class="why-card" data-reveal><h3>Practical</h3><p>Avoid unnecessary complexity.</p></div>
+        <div class="why-card" data-reveal><h3>Support</h3><p>Technology doesn't stop at deployment.</p></div>
+        <div class="why-card" data-reveal><h3>Continuous Improvement</h3><p>Systems evolve as your business grows.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING TEASER ================= -->
+  <section class="section" id="pricing">
+    <div class="container pricing-grid">
+      <div data-reveal>
+        <p class="eyebrow">INVESTMENT</p>
+        <h2 class="section-title">Every project is different.</h2>
+        <p class="lead">We provide transparent estimates based on scope, complexity and requirements — no generic one-size-fits-all pricing.</p>
+        <a href="#contact" class="btn btn-primary" data-hover>Request a Quote</a>
+      </div>
+      <ul class="price-list" data-reveal>
+        <li><span>Websites</span><strong>R2,500+</strong></li>
+        <li><span>Applications</span><strong>R5,000+</strong></li>
+        <li><span>Automation</span><strong>R1,500+</strong></li>
+        <li><span>Support</span><strong>R2,500/mo+</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <h2 data-reveal>Have a technology problem?</h2>
+      <p data-reveal>Let's turn it into a working solution.</p>
+      <div class="hero-cta" data-reveal>
+        <a href="#contact" class="btn btn-primary" data-hover>Start a Project</a>
+        <a href="mailto:info@re-el.co.za" class="btn btn-ghost" data-hover>Email Re-EL</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section section-dark" id="contact">
+    <div class="container contact-grid">
+      <div data-reveal>
+        <p class="eyebrow">REQUEST A CONSULTATION</p>
+        <h2 class="section-title">Let's build something.</h2>
+        <p class="lead">Tell us about your project and we'll get back to you with next steps.</p>
+        <div class="contact-meta">
+          <a href="mailto:info@re-el.co.za" data-hover><i data-lucide="mail"></i> info@re-el.co.za</a>
+          <a href="https://wa.me/27000000000" target="_blank" rel="noopener" data-hover><i data-lucide="message-circle"></i> WhatsApp Re-EL</a>
+        </div>
+      </div>
+
+      <form id="contactForm" class="contact-form" data-reveal novalidate>
+        <input type="text" name="company_website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="form-row">
+          <label>Full Name *<input type="text" name="name" required /></label>
+          <label>Company<input type="text" name="company" /></label>
+        </div>
+        <div class="form-row">
+          <label>Email *<input type="email" name="email" required /></label>
+          <label>Phone<input type="tel" name="phone" /></label>
+        </div>
+        <div class="form-row">
+          <label>Service *
+            <select name="service" id="serviceSelect" required>
+              <option value="">Select a service</option>
+              <option>Software Development</option>
+              <option>Website Development</option>
+              <option>Web Application</option>
+              <option>E-Commerce</option>
+              <option>API Integration</option>
+              <option>Automation</option>
+              <option>AI Solutions</option>
+              <option>Technical Support</option>
+              <option>Maintenance</option>
+              <option>UI/UX</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Budget
+            <input type="text" name="budget" placeholder="e.g. R10,000 - R30,000" />
+          </label>
+        </div>
+        <label>Project Description *<textarea name="message" rows="4" required></textarea></label>
+        <label>Timeline<input type="text" name="timeline" placeholder="e.g. 4-6 weeks" /></label>
+        <button type="submit" class="btn btn-primary" data-hover>Send Enquiry <i data-lucide="arrow-right"></i></button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-logo-wrap">
+        <svg viewBox="0 0 100 100" class="scarab-mark footer-scarab"><use href="#scarab-svg"></use></svg>
+      </div>
+      <p>Technology that moves businesses forward.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="#services">Software</a>
+      <a href="#services">Web</a>
+      <a href="#services">Automation</a>
+      <a href="#ai">AI</a>
+      <a href="#services">Support</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://wa.me/27000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:info@re-el.co.za">Email</a>
+    </div>
+  </div>
+  <div class="footer-giant" id="footerGiant">RE-EL</div>
+  <div class="footer-bottom">
+    <span>info@re-el.co.za</span>
+    <span>© <span id="year"></span> Re-EL Branding & Technologies</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/27000000000?text=Hi%20Re-EL%2C%20I%20would%20like%20to%20enquire%20about%20software%20development."
+   class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-hover>
+  <i data-lucide="message-circle"></i>
+</a>
+
+<!-- hidden SVG defs -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="scarab-svg">
+      <circle cx="50" cy="20" r="8" fill="currentColor"/>
+      <ellipse cx="50" cy="58" rx="26" ry="30" fill="currentColor"/>
+      <path d="M24 46 C10 40, 6 56, 14 64" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M76 46 C90 40, 94 56, 86 64" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M22 70 C10 72, 8 84, 16 90" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M78 70 C90 72, 92 84, 84 90" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <line x1="50" y1="12" x2="42" y2="2" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <line x1="50" y1="12" x2="58" y2="2" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <line x1="50" y1="30" x2="50" y2="86" stroke="var(--re-navy-dark)" stroke-width="2" opacity="0.4"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="assets/js/scene.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

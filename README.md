@@ -4,6 +4,7 @@ The official Re-EL website should be positioned as a **technology company websit
 
 The site should use the existing Re-EL identity: **deep navy, dark slate, yellow/gold, white/black**, with the scarab/sun concept representing technology, movement and transformation.
 
+
 I would build it as a **high-performance interactive web experience**, but keep the animations purposeful rather than turning it into a heavy visual demo.
 
 ---

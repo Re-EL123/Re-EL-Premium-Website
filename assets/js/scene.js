@@ -28,7 +28,7 @@
     }
     const geo = new THREE.BufferGeometry();
     geo.setAttribute('position', new THREE.BufferAttribute(positions,3));
-    const mat = new THREE.PointsMaterial({ color:0xF6C945, size:0.06, transparent:true, opacity:0.6 });
+    const mat = new THREE.PointsMaterial({ color:0xD6AE01, size:0.06, transparent:true, opacity:0.6 });
     particles = new THREE.Points(geo, mat);
     scene.add(particles);
 
@@ -36,7 +36,7 @@
     scarabGroup = new THREE.Group();
 
     const bodyGeo = new THREE.IcosahedronGeometry(2.1, 1);
-    const bodyMat = new THREE.MeshBasicMaterial({ color:0xF6C945, wireframe:true, transparent:true, opacity:0.55 });
+    const bodyMat = new THREE.MeshBasicMaterial({ color:0xD6AE01, wireframe:true, transparent:true, opacity:0.55 });
     const body = new THREE.Mesh(bodyGeo, bodyMat);
     scarabGroup.add(body);
 
@@ -45,7 +45,7 @@
     scarabGroup.add(new THREE.Mesh(coreGeo, coreMat));
 
     // orbital rings
-    const ringColors = [0xF6C945, 0x2F5EBB, 0xFFFFFF];
+    const ringColors = [0xD6AE01, 0x2F5EBB, 0xFFFFFF];
     for(let i=0;i<3;i++){
       const ringGeo = new THREE.TorusGeometry(3 + i*0.9, 0.01, 8, 100);
       const ringMat = new THREE.MeshBasicMaterial({ color: ringColors[i], transparent:true, opacity:0.35 });

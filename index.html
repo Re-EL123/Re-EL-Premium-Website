@@ -7,6 +7,8 @@
 <meta name="description" content="Re-EL designs, develops and supports digital solutions — software, web, automation, integrations and AI — that transform ideas into scalable technology for businesses." />
 <meta name="theme-color" content="#0A1224" />
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/re-el-mark.png" />
+<link rel="apple-touch-icon" href="assets/img/icon-192.png" />
 <link rel="manifest" href="manifest.webmanifest" />
 
 <!-- Open Graph -->
@@ -14,7 +16,10 @@
 <meta property="og:site_name" content="Re-EL Branding & Technologies" />
 <meta property="og:title" content="Re-EL — Technology that moves businesses forward." />
 <meta property="og:description" content="Software, web, automation, integrations and AI for growing businesses." />
-<meta property="og:image" content="assets/img/og-image.svg" />
+<meta property="og:image" content="assets/img/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:image" content="assets/img/og-image.png" />
 <meta property="og:url" content="https://www.re-el.co.za" />
 <meta name="twitter:card" content="summary_large_image" />
 
@@ -43,6 +48,7 @@
 <!-- ================= LOADER ================= -->
 <div id="loader" aria-hidden="true">
   <div class="loader-inner">
+    <img src="assets/img/re-el-mark.png" class="loader-logo" alt="" width="76" height="76" />
     <div class="loader-mark">RE-EL</div>
     <div class="loader-sub">TECHNOLOGY SYSTEM</div>
     <div class="loader-lines">
@@ -64,7 +70,7 @@
 <header class="nav" id="siteNav">
   <div class="nav-inner">
     <a href="#home" class="nav-logo" aria-label="Re-EL Home">
-      <svg viewBox="0 0 100 100" class="scarab-mark"><use href="#scarab-svg"></use></svg>
+      <img src="assets/img/re-el-mark.png" class="brand-mark" alt="" width="34" height="34" />
       <span>RE-EL</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
@@ -495,7 +501,7 @@
   <div class="container footer-grid">
     <div>
       <div class="footer-logo-wrap">
-        <svg viewBox="0 0 100 100" class="scarab-mark footer-scarab"><use href="#scarab-svg"></use></svg>
+        <img src="assets/img/re-el-logo.jpg" class="footer-logo" alt="Re-EL Branding & Technologies" width="136" height="136" loading="lazy" decoding="async" />
       </div>
       <p>Technology that moves businesses forward.</p>
     </div>
@@ -534,23 +540,6 @@
    class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-hover>
   <i data-lucide="message-circle"></i>
 </a>
-
-<!-- hidden SVG defs -->
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <g id="scarab-svg">
-      <circle cx="50" cy="20" r="8" fill="currentColor"/>
-      <ellipse cx="50" cy="58" rx="26" ry="30" fill="currentColor"/>
-      <path d="M24 46 C10 40, 6 56, 14 64" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M76 46 C90 40, 94 56, 86 64" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M22 70 C10 72, 8 84, 16 90" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M78 70 C90 72, 92 84, 84 90" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <line x1="50" y1="12" x2="42" y2="2" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <line x1="50" y1="12" x2="58" y2="2" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-      <line x1="50" y1="30" x2="50" y2="86" stroke="var(--re-navy-dark)" stroke-width="2" opacity="0.4"/>
-    </g>
-  </defs>
-</svg>
 
 <!-- Scripts -->
 <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>

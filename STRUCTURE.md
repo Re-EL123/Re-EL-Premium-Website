@@ -13,4 +13,9 @@ re-el-website/
     │   └── main.js
     └── img/
         ├── favicon.svg
-        └── og-image.svg
+        ├── re-el-logo.jpg
+        ├── re-el-mark.png
+        ├── og-image.png
+        ├── icon-192.png
+        ├── icon-512.png
+        └── icon-maskable-512.png

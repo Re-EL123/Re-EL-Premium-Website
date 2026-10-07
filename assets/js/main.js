@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const $  = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-  if(window.lucide) lucide.createIcons();
-
   const yearEl = $('#year');
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -102,7 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- NAV: SCROLL SPY ---------- */
   const navLinks = $$('.nav-links a');
   const spyTargets = navLinks
-    .map(a => ({ link:a, section:$(a.getAttribute('href')) }))
+    .map(a => {
+      const href = a.getAttribute('href') || '';
+      // On a subpage the nav points at '/#section' — a real navigation, not an
+      // in-page anchor, so there is nothing here to spy on.
+      return { link:a, section: href.charAt(0) === '#' ? $(href) : null };
+    })
     .filter(s => s.section);
 
   if(spyTargets.length && 'IntersectionObserver' in window){
@@ -377,43 +380,58 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    form.addEventListener('submit', e => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    function setMessage(text, kind){
+      if(!note) return;
+      note.textContent = text;
+      note.className = 'form-note' + (kind ? ' is-' + kind : '');
+    }
+
+    form.addEventListener('submit', async e => {
       e.preventDefault();
 
-      // Honeypot
+      // Honeypot — silently drop anything that filled the hidden field.
       if(form.elements.company_website && form.elements.company_website.value) return;
 
       const required = fields.filter(f => f.required);
       const results  = required.map(validateField);
-      const allValid  = results.every(Boolean);
-
-      if(!allValid){
+      if(!results.every(Boolean)){
         const firstBad = required[results.indexOf(false)];
         if(firstBad) firstBad.focus();
-        if(note) note.textContent = 'Please correct the highlighted fields and try again.';
+        setMessage('Please correct the highlighted fields and try again.', 'error');
         return;
       }
+      required.forEach(f => setFieldError(f, ''));
 
       const data = Object.fromEntries(new FormData(form).entries());
+      data._subject = `New Enquiry — ${data.service} (${data.name})`;
 
-      const subject = `New Enquiry — ${data.service} (${data.name})`;
-      const body = [
-        `Name: ${data.name}`,
-        `Company: ${data.company || '-'}`,
-        `Email: ${data.email}`,
-        `Phone: ${data.phone || '-'}`,
-        `Service: ${data.service}`,
-        `Budget: ${data.budget || '-'}`,
-        `Timeline: ${data.timeline || '-'}`,
-        '',
-        'Project Description:',
-        data.message
-      ].join('\n');
+      if(submitBtn){ submitBtn.disabled = true; submitBtn.classList.add('is-busy'); }
+      setMessage('Sending your enquiry…', 'pending');
 
-      required.forEach(f => setFieldError(f, ''));
-      window.location.href = `mailto:info@re-el.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      if(note) note.textContent = 'Opening your email client to send this enquiry to info@re-el.co.za…';
-      form.reset();
+      try{
+        const res  = await fetch(form.dataset.endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const out  = await res.json().catch(() => ({}));
+
+        if(res.ok && String(out.success) === 'true'){
+          form.reset();
+          setMessage(`Thank you — your enquiry is on its way. We will reply to ${data.email} shortly.`, 'success');
+        }else{
+          // Still awaiting activation, captcha required, or rejected. Keep every
+          // value the visitor typed and offer a direct route instead of losing it.
+          const why = out.message || 'We could not send that automatically.';
+          setMessage(`${why} Your details are saved above — email info@re-el.co.za and we will pick it up.`, 'error');
+        }
+      }catch(err){
+        setMessage('That did not send, but your details are still here. Email info@re-el.co.za and we will pick it up.', 'error');
+      }finally{
+        if(submitBtn){ submitBtn.disabled = false; submitBtn.classList.remove('is-busy'); }
+      }
     });
   }
 

@@ -43,6 +43,12 @@
 <script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="assets/css/style.css" />
 
+<!-- Google Search Console verification.
+     Either uncomment and paste the code Search Console gives you, or set it
+     in assets/js/analytics.js. Left blank so the page ships no dead requests.
+<meta name="google-site-verification" content="PASTE_YOUR_CODE_HERE" />
+-->
+
 <!-- Structured data -->
 <script type="application/ld+json">
 {
@@ -310,12 +316,67 @@
           }
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.re-el.co.za/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a website cost in South Africa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Re-EL projects start at R2,500 for a website, R5,000 for an application, R1,500 for automation and R2,500 per month for support. Every quote is scoped to your brief, so the final figure follows scope, complexity and requirements rather than a generic one-size-fits-all price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between the four tiers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Websites covers corporate sites, landing pages and web apps engineered for performance and conversion. Applications covers custom platforms, business systems and internal tools. Automation covers repetitive workflow automation. Support covers ongoing maintenance, bug fixing and optimisation after launch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you build custom software or use templates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Custom. Platforms, business systems and internal tools are built around how your company actually works, and the interface is designed around real users so it feels fast, clear and trustworthy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you connect the tools we already use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. API and integration work connects payments, CRMs, databases and third-party services to whatever we build, so your systems stop living in separate tabs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after the site or system goes live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Technology does not stop at deployment. The support engagement covers ongoing maintenance, bug fixing and optimisation, starting at R2,500 per month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we start a project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send the enquiry form below or message Re-EL on WhatsApp. The first step is a short scoping conversation so the problem is understood before anything is quoted."
+          }
+        }
+      ]
     }
   ]
 }
 </script>
 </head>
 <body>
+<a class="skip-link" href="#home">Skip to main content</a>
 
 <!-- ================= LOADER ================= -->
 <div id="loader" aria-hidden="true">
@@ -352,6 +413,7 @@
       <a href="#process" data-hover>Process</a>
       <a href="#pricing" data-hover>Pricing</a>
       <a href="#about" data-hover>About</a>
+      <a href="/insights/" data-hover>Insights</a>
       <a href="#contact" data-hover>Contact</a>
     </nav>
     <a href="#contact" class="btn btn-primary nav-cta" data-hover>Start a Project</a>
@@ -370,6 +432,7 @@
       <a href="#process">Process</a>
       <a href="#pricing">Pricing</a>
       <a href="#about">About</a>
+      <a href="/insights/">Insights</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="#contact" class="btn btn-primary" data-hover>Start a Project</a>
@@ -488,37 +551,37 @@
       <div class="services-grid">
         <article class="service-card" data-reveal data-hover tabindex="0">
           <span class="service-index">01</span>
-          <i data-lucide="code-2"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
           <h3>Software</h3>
           <p>Custom platforms, business systems and internal tools built around how your company actually works.</p>
         </article>
         <article class="service-card" data-reveal data-hover tabindex="0">
           <span class="service-index">02</span>
-          <i data-lucide="globe"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
           <h3>Web Development</h3>
           <p>Corporate websites, landing pages and web apps engineered for performance and conversion.</p>
         </article>
         <article class="service-card" data-reveal data-hover tabindex="0">
           <span class="service-index">03</span>
-          <i data-lucide="workflow"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
           <h3>Automation</h3>
           <p>Remove repetitive manual work with workflow automation connected directly to your systems.</p>
         </article>
         <article class="service-card" data-reveal data-hover tabindex="0">
           <span class="service-index">04</span>
-          <i data-lucide="plug-zap"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/><path d="m2 22 3-3"/><path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/><path d="m18 3-4 4h6l-4 4"/></svg>
           <h3>API & Integration</h3>
           <p>Connect the tools you already use — payments, CRMs, databases and third-party services.</p>
         </article>
         <article class="service-card" data-reveal data-hover tabindex="0">
           <span class="service-index">05</span>
-          <i data-lucide="life-buoy"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
           <h3>Tech Support</h3>
           <p>Ongoing maintenance, bug fixing and optimisation — technology doesn't stop at deployment.</p>
         </article>
         <article class="service-card" data-reveal data-hover tabindex="0">
           <span class="service-index">06</span>
-          <i data-lucide="layout-template"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg>
           <h3>UI / UX</h3>
           <p>Interfaces designed around real users, built to feel fast, clear and trustworthy.</p>
         </article>
@@ -570,7 +633,7 @@
         <article class="work-panel" data-reveal>
           <span class="work-num">01</span>
           <div class="work-visual wv-clockkit">
-            <i data-lucide="clock-3"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6h4"/></svg>
             <div class="reel-media" data-media aria-hidden="true">
               <img class="reel-poster" src="assets/media/work-clockkit-poster.jpg" alt="" width="960" height="540" loading="lazy" decoding="async" />
               <video data-reel-video muted loop playsinline preload="none" tabindex="-1" width="1280" height="720">
@@ -591,7 +654,7 @@
         <article class="work-panel" data-reveal>
           <span class="work-num">02</span>
           <div class="work-visual wv-rev">
-            <i data-lucide="file-user"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M16 22a4 4 0 0 0-8 0"/><circle cx="12" cy="15" r="3"/></svg>
             <div class="reel-media" data-media aria-hidden="true">
               <img class="reel-poster" src="assets/media/work-rev-poster.jpg" alt="" width="960" height="540" loading="lazy" decoding="async" />
               <video data-reel-video muted loop playsinline preload="none" tabindex="-1" width="1280" height="720">
@@ -612,7 +675,7 @@
         <article class="work-panel" data-reveal>
           <span class="work-num">03</span>
           <div class="work-visual wv-chatre">
-            <i data-lucide="bot"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
             <div class="reel-media" data-media aria-hidden="true">
               <img class="reel-poster" src="assets/media/work-chatre-poster.jpg" alt="" width="960" height="540" loading="lazy" decoding="async" />
               <video data-reel-video muted loop playsinline preload="none" tabindex="-1" width="1280" height="720">
@@ -633,7 +696,7 @@
         <article class="work-panel" data-reveal>
           <span class="work-num">04</span>
           <div class="work-visual wv-webstudio">
-            <i data-lucide="layers"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
             <div class="reel-media" data-media aria-hidden="true">
               <img class="reel-poster" src="assets/media/work-webstudio-poster.jpg" alt="" width="960" height="540" loading="lazy" decoding="async" />
               <video data-reel-video muted loop playsinline preload="none" tabindex="-1" width="1280" height="720">
@@ -728,14 +791,14 @@
       <p class="lead center" data-reveal>AI isn't a separate product line — it's one capability inside the Re-EL technology stack.</p>
 
       <div class="ai-grid">
-        <div class="ai-item" data-reveal><i data-lucide="sparkles"></i><span>AI Integrations</span></div>
-        <div class="ai-item" data-reveal><i data-lucide="message-circle"></i><span>AI Assistants</span></div>
-        <div class="ai-item" data-reveal><i data-lucide="workflow"></i><span>Workflow Automation</span></div>
-        <div class="ai-item" data-reveal><i data-lucide="file-text"></i><span>Document Processing</span></div>
-        <div class="ai-item" data-reveal><i data-lucide="search"></i><span>Intelligent Search</span></div>
-        <div class="ai-item" data-reveal><i data-lucide="bot"></i><span>Chatbot Systems</span></div>
-        <div class="ai-item" data-reveal><i data-lucide="plug"></i><span>API-Connected AI</span></div>
-        <div class="ai-item" data-reveal><i data-lucide="cog"></i><span>Business Process Automation</span></div>
+        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg><span>AI Integrations</span></div>
+        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg><span>AI Assistants</span></div>
+        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg><span>Workflow Automation</span></div>
+        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><span>Document Processing</span></div>
+        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg><span>Intelligent Search</span></div>
+        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg><span>Chatbot Systems</span></div>
+        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg><span>API-Connected AI</span></div>
+        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 10.27 7 3.34"/><path d="m11 13.73-4 6.93"/><path d="M12 22v-2"/><path d="M12 2v2"/><path d="M14 12h8"/><path d="m17 20.66-1-1.73"/><path d="m17 3.34-1 1.73"/><path d="M2 12h2"/><path d="m20.66 17-1.73-1"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m3.34 7 1.73 1"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="8"/></svg><span>Business Process Automation</span></div>
       </div>
     </div>
   </section>
@@ -774,6 +837,40 @@
     </div>
   </section>
 
+  <!-- ================= FAQ ================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <p class="eyebrow" data-reveal>COMMON QUESTIONS</p>
+      <h2 class="section-title" data-reveal>Questions, answered.</h2>
+      <div class="faq-grid">
+      <article class="faq-item" data-reveal>
+        <h3>How much does a website cost in South Africa?</h3>
+        <p>Re-EL projects start at R2,500 for a website, R5,000 for an application, R1,500 for automation and R2,500 per month for support. Every quote is scoped to your brief, so the final figure follows scope, complexity and requirements rather than a generic one-size-fits-all price.</p>
+      </article>
+      <article class="faq-item" data-reveal>
+        <h3>What is the difference between the four tiers?</h3>
+        <p>Websites covers corporate sites, landing pages and web apps engineered for performance and conversion. Applications covers custom platforms, business systems and internal tools. Automation covers repetitive workflow automation. Support covers ongoing maintenance, bug fixing and optimisation after launch.</p>
+      </article>
+      <article class="faq-item" data-reveal>
+        <h3>Do you build custom software or use templates?</h3>
+        <p>Custom. Platforms, business systems and internal tools are built around how your company actually works, and the interface is designed around real users so it feels fast, clear and trustworthy.</p>
+      </article>
+      <article class="faq-item" data-reveal>
+        <h3>Can you connect the tools we already use?</h3>
+        <p>Yes. API and integration work connects payments, CRMs, databases and third-party services to whatever we build, so your systems stop living in separate tabs.</p>
+      </article>
+      <article class="faq-item" data-reveal>
+        <h3>What happens after the site or system goes live?</h3>
+        <p>Technology does not stop at deployment. The support engagement covers ongoing maintenance, bug fixing and optimisation, starting at R2,500 per month.</p>
+      </article>
+      <article class="faq-item" data-reveal>
+        <h3>How do we start a project?</h3>
+        <p>Send the enquiry form below or message Re-EL on WhatsApp. The first step is a short scoping conversation so the problem is understood before anything is quoted.</p>
+      </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= CTA ================= -->
   <section class="cta-section" id="cta">
     <div class="section-media" data-media aria-hidden="true">
@@ -800,13 +897,19 @@
         <h2 class="section-title">Let's build something.</h2>
         <p class="lead">Tell us about your project and we'll get back to you with next steps.</p>
         <div class="contact-meta">
-          <a href="mailto:info@re-el.co.za" data-hover><i data-lucide="mail"></i> info@re-el.co.za</a>
-          <a href="https://wa.me/27813864024" target="_blank" rel="noopener" data-hover><i data-lucide="message-circle"></i> WhatsApp +27 81 386 4024</a>
+          <a href="mailto:info@re-el.co.za" data-hover><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> info@re-el.co.za</a>
+          <a href="https://wa.me/27813864024" target="_blank" rel="noopener" data-hover><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg> WhatsApp +27 81 386 4024</a>
         </div>
       </div>
 
       <form id="contactForm" class="contact-form" data-reveal
-            action="mailto:info@re-el.co.za" method="post" enctype="text/plain">
+            action="https://formsubmit.co/info@re-el.co.za" method="POST"
+            novalidate data-endpoint="https://formsubmit.co/ajax/info@re-el.co.za">
+        <!-- FormSubmit posts to this endpoint with no account. The first
+             submission sends an activation link to info@re-el.co.za — click
+             it once before going live. Without JS the form still POSTs here. -->
+        <input type="hidden" name="_next" value="https://www.re-el.co.za/thank-you.html" />
+        <input type="hidden" name="_template" value="table" />
         <input type="text" name="company_website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <div class="form-row">
           <label>Full Name *<input type="text" name="name" required autocomplete="name" /></label>
@@ -839,7 +942,7 @@
         </div>
         <label>Project Description *<textarea name="message" rows="4" required></textarea></label>
         <label>Timeline<input type="text" name="timeline" autocomplete="off" placeholder="e.g. 4-6 weeks" /></label>
-        <button type="submit" class="btn btn-primary" data-hover>Send Enquiry <i data-lucide="arrow-right"></i></button>
+        <button type="submit" class="btn btn-primary" data-hover>Send Enquiry <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
         <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -857,23 +960,25 @@
       <p>Technology that moves businesses forward.</p>
     </div>
     <div>
-      <h3>Services</h3>
-      <a href="#services">Software</a>
-      <a href="#services">Web</a>
-      <a href="#services">Automation</a>
-      <a href="#ai">AI</a>
-      <a href="#services">Support</a>
+      <h2>Services</h2>
+      <a href="/services/software-development/">Software</a>
+      <a href="/services/web-development/">Web</a>
+      <a href="/services/automation/">Automation</a>
+      <a href="/services/api-integration/">API &amp; Integration</a>
+      <a href="/services/ui-ux-design/">UI / UX</a>
+      <a href="/services/tech-support/">Support</a>
     </div>
     <div>
-      <h3>Company</h3>
+      <h2>Company</h2>
       <a href="#about">About</a>
-      <a href="#work">Work</a>
+      <a href="/work/">Work</a>
       <a href="#process">Process</a>
-      <a href="#pricing">Pricing</a>
+      <a href="/insights/">Insights</a>
+      <a href="/insights/website-cost-south-africa/">Pricing guide</a>
       <a href="#contact">Contact</a>
     </div>
     <div>
-      <h3>Connect</h3>
+      <h2>Connect</h2>
       <a href="https://github.com/Re-EL123" target="_blank" rel="noopener">GitHub</a>
       <a href="https://wa.me/27813864024" target="_blank" rel="noopener">WhatsApp</a>
       <a href="tel:+27813864024">+27 81 386 4024</a>
@@ -890,16 +995,16 @@
 <!-- Floating WhatsApp -->
 <a href="https://wa.me/27813864024?text=Hi%20Re-EL%2C%20I%20would%20like%20to%20enquire%20about%20software%20development."
    class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-hover>
-  <i data-lucide="message-circle"></i>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
 </a>
 
 <!-- Scripts -->
-<script src="assets/js/vendor/three-0.160.0.min.js"></script>
-<script src="assets/js/vendor/gsap-3.12.5.min.js"></script>
-<script src="assets/js/vendor/ScrollTrigger-3.12.5.min.js"></script>
-<script src="assets/js/vendor/lenis-1.0.42.min.js"></script>
-<script src="assets/js/vendor/lucide-1.52.0.min.js"></script>
-<script src="assets/js/scene.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/vendor/three-0.160.0.min.js" defer></script>
+<script src="assets/js/vendor/gsap-3.12.5.min.js" defer></script>
+<script src="assets/js/vendor/ScrollTrigger-3.12.5.min.js" defer></script>
+<script src="assets/js/vendor/lenis-1.0.42.min.js" defer></script>
+<script src="assets/js/scene.js" defer></script>
+<script src="assets/js/analytics.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

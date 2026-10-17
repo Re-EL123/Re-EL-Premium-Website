@@ -108,8 +108,8 @@ def page(path, title, description, body, ld_nodes, og_type="website"):
         meta("author", "Re-EL Branding & Technologies"),
         meta("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"),
         f'<link rel="canonical" href="{canonical}" />',
-        meta("theme-color", "#080B12"),
-        meta("color-scheme", "dark"),
+        meta("theme-color", "#000000"),
+        meta("color-scheme", "light dark"),
         "",
         localize(HEAD_ICONS),
         "<!-- Open Graph -->",
@@ -458,7 +458,7 @@ def build_service(s, all_services):
   <section class="section">
     <div class="container">
       <p class="eyebrow" data-reveal>OTHER CAPABILITIES</p>
-      <h2 class="section-title" data-reveal>Keep exploring.</h2>
+      <h2 class="section-title" data-reveal="split">Keep exploring.</h2>
       {cards([("Service", n, t, h) for n, t, h in others])}
     </div>
   </section>
@@ -523,7 +523,7 @@ def build_work(w, all_work):
   <section class="section">
     <div class="container">
       <p class="eyebrow" data-reveal>MORE WORK</p>
-      <h2 class="section-title" data-reveal>Real products. Real systems.</h2>
+      <h2 class="section-title" data-reveal="split">Real products. Real systems.</h2>
       {cards([("Case study", n, t, h) for n, t, h in others])}
     </div>
   </section>
@@ -560,7 +560,7 @@ def build_work_index():
     rows = cards([("Case study", w["name"], w["summary"], f"/work/{w['slug']}/")
                   for w in WORK])
     heading = ('      <p class="eyebrow" data-reveal>PORTFOLIO</p>\n'
-               '      <h2 class="section-title" data-reveal>Real products. Real systems.</h2>')
+               '      <h2 class="section-title" data-reveal="split">Real products. Real systems.</h2>')
 
     body = f"""<main id="main">
 {crumbs(trail)}
@@ -605,7 +605,7 @@ def build_services_index():
     rows = cards([("Service", s["name"], s["lead"], f"/services/{s['slug']}/")
                   for s in SERVICES])
     heading = ('      <p class="eyebrow" data-reveal>CAPABILITIES</p>\n'
-               '      <h2 class="section-title" data-reveal>A full technology engine, not a freelance gig.</h2>')
+               '      <h2 class="section-title" data-reveal="split">A full technology engine, not a freelance gig.</h2>')
     body = f"""<main id="main">
 {crumbs(trail)}
   <header class="page-hero container">
@@ -658,7 +658,7 @@ def build_insights_index():
             f'        <span class="card-arrow">Read &rarr;</span>\n'
             f'      </a>')
     heading = ('      <p class="eyebrow" data-reveal>LATEST</p>\n'
-               '      <h2 class="section-title" data-reveal>Read before you buy.</h2>')
+               '      <h2 class="section-title" data-reveal="split">Read before you buy.</h2>')
 
     body = f"""<main id="main">
 {crumbs(trail)}

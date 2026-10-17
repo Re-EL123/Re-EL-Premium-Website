@@ -8,8 +8,8 @@
 <meta name="author" content="Re-EL Branding & Technologies" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <link rel="canonical" href="https://www.re-el.co.za/" />
-<meta name="theme-color" content="#080B12" />
-<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#000000" />
+<meta name="color-scheme" content="light dark" />
 
 <!-- Icons / app -->
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -376,6 +376,7 @@
 </script>
 </head>
 <body>
+<div class="scroll-progress" aria-hidden="true"></div>
 <a class="skip-link" href="#home">Skip to main content</a>
 
 <!-- ================= LOADER ================= -->
@@ -493,7 +494,7 @@
     </div>
     <div class="container">
       <p class="eyebrow" data-reveal>WHAT WE BUILD</p>
-      <h2 class="section-title" data-reveal>From idea to infrastructure.</h2>
+      <h2 class="section-title" data-reveal="split">From idea to infrastructure.</h2>
 
       <div class="build-grid">
         <div class="build-card" data-reveal>
@@ -546,45 +547,51 @@
     </div>
     <div class="container">
       <p class="eyebrow" data-reveal>CAPABILITIES</p>
-      <h2 class="section-title" data-reveal>A full technology engine, not a freelance gig.</h2>
+      <h2 class="section-title" data-reveal="split">A full technology engine, not a freelance gig.</h2>
 
       <div class="services-grid">
-        <article class="service-card" data-reveal data-hover tabindex="0">
+        <a class="service-card" data-reveal href="/services/software-development/" data-hover>
           <span class="service-index">01</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
           <h3>Software</h3>
           <p>Custom platforms, business systems and internal tools built around how your company actually works.</p>
-        </article>
-        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="service-card" data-reveal href="/services/web-development/" data-hover>
           <span class="service-index">02</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
           <h3>Web Development</h3>
           <p>Corporate websites, landing pages and web apps engineered for performance and conversion.</p>
-        </article>
-        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="service-card" data-reveal href="/services/automation/" data-hover>
           <span class="service-index">03</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
           <h3>Automation</h3>
           <p>Remove repetitive manual work with workflow automation connected directly to your systems.</p>
-        </article>
-        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="service-card" data-reveal href="/services/api-integration/" data-hover>
           <span class="service-index">04</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/><path d="m2 22 3-3"/><path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/><path d="m18 3-4 4h6l-4 4"/></svg>
           <h3>API & Integration</h3>
           <p>Connect the tools you already use — payments, CRMs, databases and third-party services.</p>
-        </article>
-        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="service-card" data-reveal href="/services/tech-support/" data-hover>
           <span class="service-index">05</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
           <h3>Tech Support</h3>
           <p>Ongoing maintenance, bug fixing and optimisation — technology doesn't stop at deployment.</p>
-        </article>
-        <article class="service-card" data-reveal data-hover tabindex="0">
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="service-card" data-reveal href="/services/ui-ux-design/" data-hover>
           <span class="service-index">06</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg>
           <h3>UI / UX</h3>
           <p>Interfaces designed around real users, built to feel fast, clear and trustworthy.</p>
-        </article>
+          <span class="service-arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
@@ -599,7 +606,7 @@
     </div>
     <div class="container">
       <p class="eyebrow" data-reveal>TECHNOLOGY</p>
-      <h2 class="section-title" data-reveal>Behind every solution is an engine.</h2>
+      <h2 class="section-title" data-reveal="split">Behind every solution is an engine.</h2>
 
       <div class="constellation" data-reveal>
         <svg class="constellation-lines" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
@@ -627,7 +634,7 @@
   <section class="section section-dark" id="work">
     <div class="container">
       <p class="eyebrow" data-reveal>FEATURED WORK</p>
-      <h2 class="section-title" data-reveal>Real products. Real systems.</h2>
+      <h2 class="section-title" data-reveal="split">Real products. Real systems.</h2>
 
       <div class="work-list">
         <article class="work-panel" data-reveal>
@@ -647,7 +654,10 @@
             <p class="work-cat">Workforce Management Platform</p>
             <p>A workforce attendance and clocking platform built to simplify shift tracking and reporting for teams.</p>
             <div class="work-tags"><span>JavaScript</span><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-            <a href="https://www.clock-kit.rf.gd/" target="_blank" rel="noopener" class="work-link" data-hover>View Project →</a>
+            <div class="work-links">
+              <a href="/work/clock-kit/" class="work-link" data-hover>Read the case study &rarr;</a>
+              <a href="https://www.clock-kit.rf.gd/" target="_blank" rel="noopener" class="work-link work-link-ext" data-hover>Visit the live site &rarr;</a>
+            </div>
           </div>
         </article>
 
@@ -668,7 +678,10 @@
             <p class="work-cat">CV & Career Technology Platform</p>
             <p>A CV generation and career technology platform helping job seekers build professional, structured CVs.</p>
             <div class="work-tags"><span>React</span><span>Node.js</span><span>PDF Engine</span></div>
-            <a href="#contact" class="work-link" data-hover>Discuss a similar build →</a>
+            <div class="work-links">
+              <a href="/work/re-v/" class="work-link" data-hover>Read the case study &rarr;</a>
+              <a href="#contact" class="work-link work-link-ext" data-hover>Discuss a build &rarr;</a>
+            </div>
           </div>
         </article>
 
@@ -689,7 +702,10 @@
             <p class="work-cat">AI Productivity Platform</p>
             <p>An AI-powered development and productivity platform designed to speed up technical workflows.</p>
             <div class="work-tags"><span>AI</span><span>APIs</span><span>Automation</span></div>
-            <a href="#contact" class="work-link" data-hover>Discuss a similar build →</a>
+            <div class="work-links">
+              <a href="/work/chatre/" class="work-link" data-hover>Read the case study &rarr;</a>
+              <a href="#contact" class="work-link work-link-ext" data-hover>Discuss a build &rarr;</a>
+            </div>
           </div>
         </article>
 
@@ -710,7 +726,10 @@
             <p class="work-cat">Website Creation Platform</p>
             <p>An internal platform for designing and shipping client websites faster, without losing quality.</p>
             <div class="work-tags"><span>React</span><span>Design Systems</span><span>Automation</span></div>
-            <a href="#contact" class="work-link" data-hover>Discuss a similar build →</a>
+            <div class="work-links">
+              <a href="/work/webstudio/" class="work-link" data-hover>Read the case study &rarr;</a>
+              <a href="#contact" class="work-link work-link-ext" data-hover>Discuss a build &rarr;</a>
+            </div>
           </div>
         </article>
       </div>
@@ -721,7 +740,7 @@
   <section class="section" id="process">
     <div class="container">
       <p class="eyebrow" data-reveal>HOW WE WORK</p>
-      <h2 class="section-title" data-reveal>A clear process, from discovery to support.</h2>
+      <h2 class="section-title" data-reveal="split">A clear process, from discovery to support.</h2>
 
       <div class="timeline">
         <div class="timeline-line"><div class="timeline-line-fill" id="timelineFill"></div></div>
@@ -787,7 +806,7 @@
     </div>
     <div class="container">
       <p class="eyebrow" data-reveal>INSIDE THE STACK</p>
-      <h2 class="section-title" data-reveal>AI & Intelligent Automation</h2>
+      <h2 class="section-title" data-reveal="split">AI & Intelligent Automation</h2>
       <p class="lead center" data-reveal>AI isn't a separate product line — it's one capability inside the Re-EL technology stack.</p>
 
       <div class="ai-grid">
@@ -807,7 +826,7 @@
   <section class="section section-dark" id="why">
     <div class="container">
       <p class="eyebrow" data-reveal>WHY RE-EL</p>
-      <h2 class="section-title" data-reveal>Six principles behind every project.</h2>
+      <h2 class="section-title" data-reveal="split">Six principles behind every project.</h2>
       <div class="why-grid">
         <div class="why-card" data-reveal><h3>Business First</h3><p>Technology must solve an actual business problem.</p></div>
         <div class="why-card" data-reveal><h3>Built Around You</h3><p>Solutions are designed around your workflow.</p></div>
@@ -841,7 +860,7 @@
   <section class="section" id="faq">
     <div class="container">
       <p class="eyebrow" data-reveal>COMMON QUESTIONS</p>
-      <h2 class="section-title" data-reveal>Questions, answered.</h2>
+      <h2 class="section-title" data-reveal="split">Questions, answered.</h2>
       <div class="faq-grid">
       <article class="faq-item" data-reveal>
         <h3>How much does a website cost in South Africa?</h3>
@@ -912,15 +931,15 @@
         <input type="hidden" name="_template" value="table" />
         <input type="text" name="company_website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <div class="form-row">
-          <label>Full Name *<input type="text" name="name" required autocomplete="name" /></label>
+          <label>Full Name<span class="req" aria-hidden="true">*</span><input type="text" name="name" required autocomplete="name" /></label>
           <label>Company<input type="text" name="company" autocomplete="organization" /></label>
         </div>
         <div class="form-row">
-          <label>Email *<input type="email" name="email" required autocomplete="email" /></label>
+          <label>Email<span class="req" aria-hidden="true">*</span><input type="email" name="email" required autocomplete="email" /></label>
           <label>Phone<input type="tel" name="phone" autocomplete="tel" /></label>
         </div>
         <div class="form-row">
-          <label>Service *
+          <label>Service<span class="req" aria-hidden="true">*</span>
             <select name="service" id="serviceSelect" required>
               <option value="">Select a service</option>
               <option>Software Development</option>
@@ -940,7 +959,7 @@
             <input type="text" name="budget" autocomplete="off" placeholder="e.g. R10,000 - R30,000" />
           </label>
         </div>
-        <label>Project Description *<textarea name="message" rows="4" required></textarea></label>
+        <label>Project Description<span class="req" aria-hidden="true">*</span><textarea name="message" rows="4" required></textarea></label>
         <label>Timeline<input type="text" name="timeline" autocomplete="off" placeholder="e.g. 4-6 weeks" /></label>
         <button type="submit" class="btn btn-primary" data-hover>Send Enquiry <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
         <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
@@ -999,12 +1018,12 @@
 </a>
 
 <!-- Scripts -->
-<script src="assets/js/vendor/three-0.160.0.min.js" defer></script>
-<script src="assets/js/vendor/gsap-3.12.5.min.js" defer></script>
-<script src="assets/js/vendor/ScrollTrigger-3.12.5.min.js" defer></script>
-<script src="assets/js/vendor/lenis-1.0.42.min.js" defer></script>
-<script src="assets/js/scene.js" defer></script>
+<script src="assets/js/vendor/gsap-3.15.0.min.js" defer></script>
+<script src="assets/js/vendor/ScrollTrigger-3.15.0.min.js" defer></script>
+<script src="assets/js/vendor/SplitText-3.15.0.min.js" defer></script>
+<script src="assets/js/vendor/lenis-1.3.26.min.js" defer></script>
 <script src="assets/js/analytics.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/scene.js" defer></script>
 </body>
 </html>

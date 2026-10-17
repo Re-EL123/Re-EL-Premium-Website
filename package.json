@@ -1,0 +1,14 @@
+{
+  "name": "re-el-premium-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Re-EL Branding & Technologies marketing site",
+  "scripts": {
+    "build": "bash tools/build.sh",
+    "verify": "python3 tools/verify.py",
+    "test": "npm run build && python3 tools/verify.py"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

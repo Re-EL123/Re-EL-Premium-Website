@@ -1,65 +1,42 @@
 /* ============ DESIGN TOKENS ============ */
 :root{
-  --color-white:#fff;
-  --color-text:#0a0a0a;
-  --color-text-secondary:rgba(10,10,10,.6);
-  --color-text-tertiary:rgba(255,255,255,.6);
-  --color-background:#f5f5f5;
-  --color-background-secondary:#0a0a0a;
-  --color-primary:#000;
-  --color-secondary:#fff;
-  --color-green:#40a53c;
-  --color-gray-ultra-light:#0a0a0a0a;
-  --padding-sm:2.25rem;
-  --padding-md:7.5rem;
-  --padding-lg:10rem;
-  --padding-xl:11.875rem;
-  --font-family:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-                Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
-  --font-size-xs:.75rem;
-  --font-size-sm:.875rem;
-  --font-size-base:1rem;
-  --font-size-lg:1.125rem;
-  --font-size-xl:1.25rem;
-  --font-size-2xl:1.5rem;
-  --font-size-3xl:2rem;
-  --transition-fast:.15s ease-in-out;
-  --transition-base:.3s ease-in-out;
-  --transition-slow:.5s ease-in-out;
-  --z-index-dropdown:1000;
-  --z-index-sticky:1020;
-  --z-index-fixed:1030;
-  --z-index-modal-backdrop:1040;
-  --z-index-modal:1050;
-  --z-index-popover:1060;
-  --z-index-tooltip:1070;
+  /* ---- brand, anchored on the official logo ---- */
+  --re-yellow:#D6AE01;        /* logo gold */
+  --re-yellow-soft:#EEDF99;   /* gold tint for gradients */
+  --re-navy:#1E3A6E;          /* brand navy */
+  --re-blue:#2F5EBB;          /* secondary accent — graphics & data only */
 
-  --re-yellow:#000000;
-  --re-yellow-soft:#000000;
-  --re-glow:rgba(0,0,0,.12);
-  --re-line:rgba(0,0,0,.08);
-  --re-line-soft:rgba(0,0,0,.06);
-  --re-line-faint:rgba(0,0,0,.04);
-  --re-white:#ffffff;
-  --re-white-soft:rgba(10,10,10,.6);
-  --re-surface:#f5f5f5;
-  --re-surface-hi:#ffffff;
-  --re-slate:#0a0a0a99;
-  --re-deep:#000000;
-  --ease:cubic-bezier(.16,.84,.44,1);
+  /* ---- surfaces, lightest lift last ---- */
+  --re-black:#080B12;         /* base canvas */
+  --re-navy-dark:#0F1730;     /* primary dark surface */
+  --re-surface:#141E3C;       /* card surface */
+  --re-surface-hi:#1A2648;    /* card hover */
+  --re-slate:#243356;         /* muted navy */
+  --re-deep:#05070D;          /* deepest — footer & full-screen overlays */
+
+  /* ---- lines & text ---- */
+  --re-glow:rgba(214,174,1,.35);
+  --re-line:rgba(255,255,255,.14);
+  --re-line-soft:rgba(255,255,255,.09);
+  --re-line-faint:rgba(255,255,255,.06);
+  --re-white:#FFFFFF;
+  --re-white-soft:rgba(255,255,255,.74);
+
+  --font-head:'Space Grotesk', sans-serif;
+  --font-body:'Inter', sans-serif;
+  --font-mono:'JetBrains Mono', monospace;
+
+  --ease: cubic-bezier(.16,.84,.44,1); /* = GSAP power3.out, used for every JS tween */
 }
 
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:auto;}
 body{
-  background:var(--color-background);
-  color:var(--color-text-secondary);
-  font-family:var(--font-family);
+  background:var(--re-black);
+  color:var(--re-white);
+  font-family:var(--font-body);
   overflow-x:hidden;
-  line-height:1.4;
-  letter-spacing:-.04rem;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
 }
 h1,h2,h3,h4{font-family:var(--font-head); font-weight:600; letter-spacing:-0.02em;}
 a{color:inherit; text-decoration:none;}

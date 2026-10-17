@@ -53,10 +53,13 @@
 html{scroll-behavior:auto;}
 body{
   background:var(--color-background);
-  color:var(--color-text);
-  font-family:var(--font-body);
+  color:var(--color-text-secondary);
+  font-family:var(--font-family);
   overflow-x:hidden;
-  line-height:1.6;
+  line-height:1.4;
+  letter-spacing:-.04rem;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 h1,h2,h3,h4{font-family:var(--font-head); font-weight:600; letter-spacing:-0.02em;}
 a{color:inherit; text-decoration:none;}
@@ -696,3 +699,13 @@ input,select,textarea{font-family:inherit;}
 .page-icon{display:inline-block; vertical-align:-7px; margin-right:6px; color:var(--re-yellow);}
 .page-icon svg{width:20px; height:20px;}
 .page-hero .eyebrow{display:flex; align-items:center;}
+
+/* Nixtio base helpers */
+.wrapper{width:100%;max-width:75.5rem;margin:0 auto;padding:0 2.25rem}
+.h1,.h2,.h3,.h4,.h5{color:var(--color-text);font-weight:600}
+.h2{letter-spacing:-.1625rem;font-size:3.25rem;line-height:110%}
+.h3{letter-spacing:-.075rem;font-size:1.875rem;line-height:120%}
+.h4{letter-spacing:-.055rem;font-size:1.375rem;line-height:1.65rem}
+.text--base{font-size:1rem;line-height:1.5rem}
+.--color-gray{color:var(--color-text-secondary)}
+.--color-white{color:var(--color-white)}

@@ -1216,3 +1216,23 @@ input,select,textarea{font-family:inherit;}
 .carousel-dots{display:flex;gap:8px;margin-left:10px;}
 .carousel-dot{width:9px;height:9px;border-radius:50%;background:#CBD7EF;transition:background .25s,transform .25s;}
 .carousel-dot.is-active{background:#D6AE01;transform:scale(1.35);}
+
+/* Carousel scroll cues (V3.12) — edge fades + swipe hint + hover life */
+.svc-grid{
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 28px,#000 calc(100% - 56px),transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 28px,#000 calc(100% - 56px),transparent 100%);
+}
+.swipe-hint{
+  display:inline-flex;align-items:center;gap:8px;margin-top:10px;
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#2F5EBB;
+}
+.swipe-hint i{display:inline-block;animation:hintNudge 1.8s ease-in-out infinite;}
+@keyframes hintNudge{0%,100%{transform:translateX(0);}50%{transform:translateX(8px);}}
+.svc{transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;}
+.svc:hover{transform:translateY(-8px);border-color:#D6AE01;box-shadow:0 22px 48px rgba(15,23,48,.14);}
+.svc:hover .svc-top svg{transform:scale(1.16) rotate(-6deg);}
+.svc-top svg{transition:transform .4s var(--ease);}
+.svc:hover .svc-body a{color:#B89301;letter-spacing:.04em;}
+.svc-body a{transition:color .25s,letter-spacing .25s;}
+.carousel-btn:hover{animation:btnPulse .6s ease;}
+@keyframes btnPulse{0%{transform:scale(1);}50%{transform:scale(1.12);}100%{transform:scale(1);}}

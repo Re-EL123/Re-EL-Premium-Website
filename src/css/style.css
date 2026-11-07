@@ -1134,3 +1134,12 @@ input,select,textarea{font-family:inherit;}
 /* Product family logos */
 .partner-pill{display:flex;align-items:center;gap:10px;padding:10px 18px;}
 .partner-pill img{height:36px;width:auto;object-fit:contain;}
+
+/* Stats cards fix (V3.8) — labels were white on white */
+#results .stat, .corp-testimonials .stat{
+  background:#FFFFFF;border:1px solid #E1E8F5;
+  box-shadow:0 6px 24px rgba(15,23,48,.06);
+}
+#results .stat strong, .corp-testimonials .stat strong{color:#1E3A6E;}
+#results .stat span, .corp-testimonials .stat span{color:#5A6B8C;}
+#results .stat [data-count], .corp-testimonials .stat [data-count]{color:inherit;}

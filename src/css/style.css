@@ -1183,3 +1183,15 @@ input,select,textarea{font-family:inherit;}
   display:inline-block;white-space:nowrap;
 }
 @keyframes goldShine{to{background-position:200% center;}}
+
+/* Nav dropdown fix (V3.10) — light menu, aligned items */
+.nav-links{align-items:center;}
+.nav-drop{display:inline-flex;align-items:center;line-height:1;}
+.nav-drop > a{padding:4px 0;line-height:1.4;}
+.nav-drop-menu{
+  background:#FFFFFF;border:1px solid #E1E8F5;
+  box-shadow:0 18px 44px rgba(15,23,48,.14);
+}
+.nav-drop-menu a{color:#0A1224;}
+.nav-drop-menu a small{color:#2F5EBB;}
+.nav-drop-menu a:hover{background:#FFF8E1;}

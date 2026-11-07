@@ -1236,3 +1236,43 @@ input,select,textarea{font-family:inherit;}
 .svc-body a{transition:color .25s,letter-spacing .25s;}
 .carousel-btn:hover{animation:btnPulse .6s ease;}
 @keyframes btnPulse{0%{transform:scale(1);}50%{transform:scale(1.12);}100%{transform:scale(1);}}
+
+/* ============================================================
+   SPIRAL FLUX for OUR PROJECTS (Horizon-style, V3.13)
+   Photos ride a turning spiral; edges flare with colour rim.
+   ============================================================ */
+.spiral-stage{
+  perspective:1400px;
+  min-height:460px;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;
+  touch-action:pan-y;cursor:grab;
+}
+.spiral-stage:active{cursor:grabbing;}
+.spiral-ring{
+  position:relative;width:300px;height:420px;transform-style:preserve-3d;
+  transform:rotateX(-6deg);
+  will-change:transform;
+}
+.spiral-card{
+  position:absolute;top:0;left:0;width:300px;
+  transform:rotateY(calc(var(--i) * 60deg)) translateZ(520px) rotateX(6deg);
+  backface-visibility:hidden;
+  box-shadow:0 24px 60px rgba(15,23,48,.16);
+  border-radius:18px;overflow:hidden;
+  filter:drop-shadow(0 0 6px rgba(214,174,1,.22));
+}
+.spiral-card:hover{box-shadow:0 30px 70px rgba(15,23,48,.22),0 0 18px rgba(214,174,1,.35);}
+.spiral-stage::before,
+.spiral-stage::after{
+  content:'';position:absolute;left:0;right:0;height:120px;pointer-events:none;z-index:2;
+}
+.spiral-stage::before{top:0;background:linear-gradient(180deg,#FFFFFF 30%,transparent);}
+.spiral-stage::after{bottom:0;background:linear-gradient(0deg,#FFFFFF 30%,transparent);}
+@media(max-width:900px){
+  .spiral-card{width:260px;}
+  .spiral-ring{width:260px;min-height:430px;}
+}
+@media(max-width:640px){
+  .spiral-card{width:230px;}
+  .spiral-ring{width:230px;}
+}

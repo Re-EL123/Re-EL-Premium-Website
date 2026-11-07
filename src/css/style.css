@@ -1175,3 +1175,12 @@ section > .container{flex:1 1 auto;display:flex;flex-direction:column;}
   .card-grid > *, .faq-grid > *, .stats-row > *{flex:1 1 100%;min-width:0;}
   .quotes > *{flex:1 1 100%;}
 }
+
+/* ============================================================
+   REVERT: Hero + INVESTMENT back to grid (pre-flexbox), V3.4
+   ============================================================ */
+.corp-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+@media(max-width:1024px){
+  .corp-hero-grid,.pricing-grid{grid-template-columns:1fr;}
+}

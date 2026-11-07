@@ -417,14 +417,14 @@
           <a href="https://mailer.re-el.co.za" target="_blank" rel="noopener" data-hover><small>Re-EL Mailer</small>Business Email</a>
         </span>
       </div>
-      <a href="#services" data-hover>Services</a>
-      <a href="/results/" data-hover>Results</a>
-      <a href="#process" data-hover>Process</a>
+      <a href="/#home" data-hover>Home</a>
+      <a href="#services" data-hover>Service</a>
+      <a href="#products" data-hover>Project</a>
       <a href="#about" data-hover>About</a>
-      <a href="/insights/" data-hover>Insights</a>
+      <a href="/insights/" data-hover>Blog</a>
       <a href="#contact" data-hover>Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-primary nav-cta" data-hover>Start a Project</a>
+    <a href="#contact" class="btn btn-quote nav-cta" data-hover>Get a Quote</a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span>
     </button>
@@ -445,7 +445,7 @@
       <a href="/insights/">Insights</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-primary" data-hover>Start a Project</a>
+    <a href="#contact" class="btn btn-quote" data-hover>Get a Quote</a>
     <div class="mobile-menu-footer">
       <p>Let's build something.</p>
       <a href="mailto:info@re-el.co.za">info@re-el.co.za</a>
@@ -455,459 +455,139 @@
 
 <main id="home">
 
-  <!-- ================= HERO ================= -->
-  <section class="hero" aria-label="Introduction">
-    <canvas id="heroCanvas"></canvas>
-    <div class="hero-grid-overlay"></div>
-
-    <div class="hero-content">
-      <p class="eyebrow" data-reveal>RE-EL BRANDING &amp; TECHNOLOGIES · A BETTER TOMORROW. NATURALLY.</p>
-      <h1 class="hero-title">
-        <span class="line" data-reveal>Imagine a better world.</span>
-        <span class="line" data-reveal>Now imagine what</span>
-        <span class="line" data-reveal><em class="word-cycle" id="wordCycle">we can build</em>.</span>
-      </h1>
-      <p class="hero-sub" data-reveal>
-        Real products that solve real problems — for <span data-product-cycle>workforce</span>.
-      </p>
-      <div class="hero-cta" data-reveal>
-        <a href="/products/" class="btn btn-primary" data-hover>Explore Our Products</a>
-        <a href="#contact" class="btn btn-ghost" data-hover>Start a Project</a>
-      </div>
-    </div>
-
-    <div class="hero-status" data-reveal>
-      <div class="hero-status-title">RE-EL TECHNOLOGY SYSTEM — RESULTS YOU CAN MEASURE</div>
-      <div class="hero-status-row">
-        <span class="status-dot"></span> ONLINE
-        <span class="status-sep">/</span>
-        <span>PRODUCTS</span><span class="status-sep">·</span>
-        <span>WEB</span><span class="status-sep">·</span>
-        <span>AUTOMATION</span><span class="status-sep">·</span>
-        <span>INTEGRATION</span><span class="status-sep">·</span>
-        <span>SUPPORT</span>
-      </div>
-    </div>
-
-    <div class="scroll-cue" aria-hidden="true"><span></span></div>
-  </section>
-
-
-  <!-- ================= PROMISE STRIP ================= -->
-  <div class="promise-strip" aria-label="Re-EL quality promise">
-    <div class="container">
-      <span><strong>●</strong> Built for outcomes</span>
-      <span><strong>●</strong> Scalable by design</span>
-      <span><strong>●</strong> Supported after launch</span>
-      <span><strong>●</strong> South African built, globally standard</span>
-    </div>
-  </div>
-  <!-- ================= WHAT WE BUILD ================= -->
-  <section class="section" id="solutions">
-    <div class="section-media" data-media aria-hidden="true">
-      <picture>
-        <source type="image/webp" srcset="assets/media/bg-solutions-800.webp 800w, assets/media/bg-solutions-1600.webp 1600w" sizes="100vw" />
-        <img src="assets/media/bg-solutions-1600.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async" />
-      </picture>
-    </div>
-    <div class="container">
-      <p class="eyebrow" data-reveal>WHAT WE BUILD</p>
-      <h2 class="section-title" data-reveal="split">From idea to infrastructure.</h2>
-
-      <div class="build-grid">
-        <div class="build-card" data-reveal>
-          <span class="build-index">01</span>
-          <h3>Software</h3>
-          <ul>
-            <li>Web applications</li>
-            <li>Business systems</li>
-            <li>Custom platforms</li>
-            <li>APIs</li>
-            <li>Databases</li>
-            <li>Automation</li>
-          </ul>
+  <!-- ================= CORPORATE HERO ================= -->
+  <section class="corp-hero" id="home" aria-label="Introduction">
+    <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;opacity:.25;pointer-events:none;" aria-hidden="true"></canvas>
+    <div class="container corp-hero-grid">
+      <div class="hero-content" style="text-align:left;margin:0;padding:0;max-width:none;">
+        <p class="eyebrow" data-reveal>RE-EL BRANDING &amp; TECHNOLOGIES</p>
+        <h1 data-reveal>Imagine a better world. Now imagine what <em>we can build.</em></h1>
+        <p class="corp-sub" data-reveal>Real products that solve real problems — for <span data-product-cycle>workforce</span>. Clock-Kit for teams. LaundroMaster for laundries. Re-EL ECD for daycare centres. Mailer for professional business email.</p>
+        <div class="corp-actions" data-reveal>
+          <a href="/products/" class="btn btn-quote" data-hover>Explore Products</a>
+          <a href="/#contact" class="btn btn-ghost" data-hover style="color:#1E3A6E;border-color:#1E3A6E;">Get a Quote</a>
         </div>
-        <div class="build-card" data-reveal>
-          <span class="build-index">02</span>
-          <h3>Digital</h3>
-          <ul>
-            <li>Corporate websites</li>
-            <li>Landing pages</li>
-            <li>E-commerce</li>
-            <li>UI / UX</li>
-            <li>Branding</li>
-            <li>Digital experiences</li>
-          </ul>
-        </div>
-        <div class="build-card" data-reveal>
-          <span class="build-index">03</span>
-          <h3>Technology Support</h3>
-          <ul>
-            <li>Maintenance</li>
-            <li>Bug fixing</li>
-            <li>Technical support</li>
-            <li>System optimisation</li>
-            <li>Integrations</li>
-            <li>Cloud support</li>
-          </ul>
+      </div>
+      <div class="corp-visual" data-reveal>
+        <div class="cv-grid">
+          <div class="cv"><strong>Clock-Kit</strong><span>Workforce clocking</span><br/><a href="https://www.clock-kit.rf.gd/" target="_blank" rel="noopener">Live &rarr;</a></div>
+          <div class="cv"><strong>LaundroMaster</strong><span>Laundry bookings</span><br/><a href="https://laundromaster.re-el.co.za/apps/customer/" target="_blank" rel="noopener">Live &rarr;</a></div>
+          <div class="cv"><strong>Re-EL ECD</strong><span>Daycare workspace</span><br/><a href="https://ecd.re-el.co.za" target="_blank" rel="noopener">Live &rarr;</a></div>
+          <div class="cv"><strong>Re-EL Mailer</strong><span>Business email</span><br/><a href="https://mailer.re-el.co.za" target="_blank" rel="noopener">Open &rarr;</a></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= SERVICES GRID ================= -->
-  <section class="section section-dark" id="services">
-    <div class="section-media" data-media aria-hidden="true">
-      <picture>
-        <source type="image/webp" srcset="assets/media/bg-services-800.webp 800w, assets/media/bg-services-1600.webp 1600w" sizes="100vw" />
-        <img src="assets/media/bg-services-1600.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" />
-      </picture>
-    </div>
+  <!-- ================= OUR PRODUCTS (TEAM STRIP) ================= -->
+  <section class="team-strip" id="vision">
     <div class="container">
-      <p class="eyebrow" data-reveal>CAPABILITIES</p>
-      <h2 class="section-title" data-reveal="split">A full technology engine, not a freelance gig.</h2>
-
-      <div class="services-grid">
-        <a class="service-card" data-reveal href="/services/software-development/" data-hover>
-          <span class="service-index">01</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-          <h3>Software</h3>
-          <p>Custom platforms, business systems and internal tools built around how your company actually works.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="service-card" data-reveal href="/services/web-development/" data-hover>
-          <span class="service-index">02</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-          <h3>Web Development</h3>
-          <p>Corporate websites, landing pages and web apps engineered for performance and conversion.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="service-card" data-reveal href="/services/automation/" data-hover>
-          <span class="service-index">03</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
-          <h3>Automation</h3>
-          <p>Remove repetitive manual work with workflow automation connected directly to your systems.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="service-card" data-reveal href="/services/api-integration/" data-hover>
-          <span class="service-index">04</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/><path d="m2 22 3-3"/><path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/><path d="m18 3-4 4h6l-4 4"/></svg>
-          <h3>API & Integration</h3>
-          <p>Connect the tools you already use — payments, CRMs, databases and third-party services.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="service-card" data-reveal href="/services/tech-support/" data-hover>
-          <span class="service-index">05</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
-          <h3>Tech Support</h3>
-          <p>Ongoing maintenance, bug fixing and optimisation — technology doesn't stop at deployment.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="service-card" data-reveal href="/services/ui-ux-design/" data-hover>
-          <span class="service-index">06</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg>
-          <h3>UI / UX</h3>
-          <p>Interfaces designed around real users, built to feel fast, clear and trustworthy.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="service-card" data-reveal href="/services/business-email/" data-hover>
-          <span class="service-index">07</span>
-          <h3>Business Email</h3>
-          <p>Professional email on your domain via Re-EL Mailer. Live at mailer.re-el.co.za.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="service-card" data-reveal href="/services/company-profiles/" data-hover>
-          <span class="service-index">08</span>
-          <h3>Company Profiles</h3>
-          <p>Company profiles and business plans for tenders, clients and new businesses.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="service-card" data-reveal href="/services/branding/" data-hover>
-          <span class="service-index">09</span>
-          <h3>Branding & Graphics</h3>
-          <p>Logo design, flyers and visual identity that make your business easy to trust.</p>
-          <span class="service-arrow" aria-hidden="true">&rarr;</span>
-        </a>
+      <p class="eyebrow" data-reveal>PRODUCT FAMILY</p>
+      <h2 class="section-title" data-reveal="split">Built by Re-EL. Used in the real world.</h2>
+      <p class="lead" data-reveal>From clocking in to washing, from first classroom to professional email — one team, one standard.</p>
+      <div class="team-row">
+        <div class="team-member" data-reveal><div class="avatar">CK</div><h3>Clock-Kit</h3><p>Workforce</p></div>
+        <div class="team-member" data-reveal><div class="avatar">LM</div><h3>LaundroMaster</h3><p>Laundry</p></div>
+        <div class="team-member" data-reveal><div class="avatar">ECD</div><h3>Re-EL ECD</h3><p>Daycare</p></div>
+        <div class="team-member" data-reveal><div class="avatar">M</div><h3>Re-EL Mailer</h3><p>Email</p></div>
+        <div class="team-member" data-reveal><div class="avatar">RV</div><h3>Re-V</h3><p>Careers</p></div>
+        <div class="team-member" data-reveal><div class="avatar">CH</div><h3>Chatre</h3><p>AI</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ================= TECHNOLOGY CONSTELLATION ================= -->
-  <section class="section" id="stack">
-    <div class="section-media" data-media aria-hidden="true">
-      <picture>
-        <source type="image/webp" srcset="assets/media/bg-stack-800.webp 800w, assets/media/bg-stack-1600.webp 1600w" sizes="100vw" />
-        <img src="assets/media/bg-stack-1600.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async" />
-      </picture>
-    </div>
+  <!-- ================= SERVICES TAILORED TO YOU (id=services) ================= -->
+  <section class="corp-services" id="services">
     <div class="container">
-      <p class="eyebrow" data-reveal>TECHNOLOGY</p>
-      <h2 class="section-title" data-reveal="split">Behind every solution is an engine.</h2>
-
-      <div class="constellation" data-reveal>
-        <svg class="constellation-lines" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-          <line x1="400" y1="250" x2="150" y2="80"></line>
-          <line x1="400" y1="250" x2="400" y2="60"></line>
-          <line x1="400" y1="250" x2="650" y2="80"></line>
-          <line x1="400" y1="250" x2="120" y2="300"></line>
-          <line x1="400" y1="250" x2="680" y2="300"></line>
-          <line x1="400" y1="250" x2="220" y2="430"></line>
-          <line x1="400" y1="250" x2="580" y2="430"></line>
-        </svg>
-        <div class="node node-center">RE-EL ENGINE</div>
-        <div class="node" style="left:18.75%; top:16%">Frontend</div>
-        <div class="node" style="left:50%; top:12%">Backend</div>
-        <div class="node" style="left:81.25%; top:16%">Database</div>
-        <div class="node" style="left:15%; top:60%">Cloud</div>
-        <div class="node" style="left:85%; top:60%">APIs</div>
-        <div class="node" style="left:27.5%; top:86%">Automation</div>
-        <div class="node" style="left:72.5%; top:86%">AI</div>
+      <p class="eyebrow" data-reveal>SERVICES TAILORED TO YOU</p>
+      <h2 class="section-title" data-reveal="split">What Re-EL does for you.</h2>
+      <p class="lead" data-reveal>Software, web, automation, integration, support, design — plus business email, company profiles and branding.</p>
+      <div class="svc-grid">
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg></div><div class="svc-body"><h3>Software Development</h3><p>Custom platforms and business systems built around how you actually work.</p><a href="/services/software-development/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg></div><div class="svc-body"><h3>Web Development</h3><p>Fast, accessible corporate websites and web apps that convert.</p><a href="/services/web-development/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></div><div class="svc-body"><h3>Automation</h3><p>Remove repetitive manual work with workflow automation.</p><a href="/services/automation/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3v4a2 2 0 0 0 2 2h4"/><path d="M8 21v-4a2 2 0 0 0-2-2H2"/><path d="m2 22 3-3"/><path d="M7.5 13.5 10 11"/><path d="m18 3-4 4h6l-4 4"/></svg></div><div class="svc-body"><h3>API & Integration</h3><p>Connect payments, CRMs and the tools you already pay for.</p><a href="/services/api-integration/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg></div><div class="svc-body"><h3>Tech Support</h3><p>Maintenance, fixes and optimisation — 24–48h response.</p><a href="/services/tech-support/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="1"/><rect x="3" y="14" width="9" height="7" rx="1"/><rect x="16" y="14" width="5" height="7" rx="1"/></svg></div><div class="svc-body"><h3>UI / UX Design</h3><p>Interfaces designed around real users — fast and trustworthy.</p><a href="/services/ui-ux-design/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.99 5.73a2 2 0 0 1-2.02 0L2 7"/></svg></div><div class="svc-body"><h3>Business Email</h3><p>Professional email on your domain via Re-EL Mailer.</p><a href="/services/business-email/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l4 4v14a2 2 0 0 1-2 2z"/><path d="M14 2v4h4"/></svg></div><div class="svc-body"><h3>Company Profiles</h3><p>Profiles and business plans for tenders, clients and start-ups.</p><a href="/services/company-profiles/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="svc" data-reveal><div class="svc-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12 2 3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div><div class="svc-body"><h3>Branding & Graphics</h3><p>Logos, flyers and visual identity that build trust.</p><a href="/services/branding/" data-hover>Learn More &rarr;</a></div></article>
       </div>
     </div>
   </section>
 
-
-  <!-- ================= THE BETTER WORLD / VISION ================= -->
-  <section class="section section-light" id="vision">
+  <!-- ================= OUR PROJECTS = OUR PRODUCTS (id=products) ================= -->
+  <section class="corp-projects" id="products">
     <div class="container">
-      <p class="eyebrow" data-reveal>THE BETTER WORLD</p>
-      <h2 class="section-title" data-reveal="split">Built to solve real problems.</h2>
-      <p class="lead" data-reveal>At Re-EL Branding &amp; Technologies, we believe technology should create real opportunity — not just another dashboard. Every product represents a step towards something better.</p>
-      <div class="sun-arc" aria-hidden="true"></div>
-      <div class="better-grid">
-        <article class="better-card" data-reveal><span class="b-num">01</span><h3>Opportunities</h3><p>A world where technology creates opportunities — for businesses, workers and communities.</p></article>
-        <article class="better-card" data-reveal><span class="b-num">02</span><h3>New heights</h3><p>Businesses reach new heights with systems that connect, automate and scale.</p></article>
-        <article class="better-card" data-reveal><span class="b-num">03</span><h3>Smarter work</h3><p>People work smarter — less paperwork, more meaningful work, clearer reporting.</p></article>
-        <article class="better-card" data-reveal><span class="b-num">04</span><h3>Every generation</h3><p>Every generation has the opportunity to thrive — from early childhood onwards.</p></article>
-      </div>
-    </div>
-  </section>
-  <!-- ================= PRODUCTS ================= -->
-  <section class="section section-light" id="products">
-    <div class="container">
-      <p class="eyebrow" data-reveal>OUR PRODUCTS</p>
-      <h2 class="section-title" data-reveal="split">Possibilities, built. Real products. Real systems.</h2>
-
-      <div class="products-list">
-        <article class="work-panel" data-reveal>
-          <span class="work-num">01</span>
-          <div class="work-visual wv-clockkit">
-            <svg class="work-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6h4"/></svg>
-          </div>
-          <div class="work-info">
-            <h3>Clock-Kit</h3>
-            <p class="work-cat">Workforce Management Platform</p>
-            <p>A workforce attendance and clocking platform built to simplify shift tracking and reporting for teams.</p>
-            <div class="audience-tabs" x-data="{ tab: 'employers' }">
-              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'employers' }" @click="tab = 'employers'">For Employers</button>
-              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'employees' }" @click="tab = 'employees'">For Employees</button>
-              <div class="tab-panel" x-show="tab === 'employers'"><ul><li>One dashboard across sites, hosts & teams</li><li>Live attendance + signed, billing-ready timesheets</li><li>Reports without spreadsheets</li></ul></div>
-              <div class="tab-panel" x-show="tab === 'employees'"><ul><li>Clock in from your phone in one tap</li><li>Location check + offline queue (PENDING SYNC)</li><li>Leave & shift schedules in one place</li></ul></div>
-            </div>
-            <div class="work-tags"><span>JavaScript</span><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-            <div class="work-links">
-              <a href="/work/clock-kit/" class="work-link" data-hover>Read the case study &rarr;</a>
-              <a href="https://www.clock-kit.rf.gd/" target="_blank" rel="noopener" class="work-link work-link-ext" data-hover>Visit the live site &rarr;</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-panel" data-reveal>
-          <span class="work-num">02</span>
-          <div class="work-visual wv-rev">
-            <svg class="work-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M16 22a4 4 0 0 0-8 0"/><circle cx="12" cy="15" r="3"/></svg>
-          </div>
-          <div class="work-info">
-            <h3>Re-V</h3>
-            <p class="work-cat">CV & Career Technology Platform</p>
-            <p>A CV generation and career technology platform helping job seekers build professional, structured CVs.</p>
-            <div class="work-tags"><span>React</span><span>Node.js</span><span>PDF Engine</span></div>
-            <div class="work-links">
-              <a href="/work/re-v/" class="work-link" data-hover>Read the case study &rarr;</a>
-              <a href="#contact" class="work-link work-link-ext" data-hover>Discuss a build &rarr;</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-panel" data-reveal>
-          <span class="work-num">03</span>
-          <div class="work-visual wv-chatre">
-            <svg class="work-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-          </div>
-          <div class="work-info">
-            <h3>Chatre</h3>
-            <p class="work-cat">AI Productivity Platform</p>
-            <p>An AI-powered development and productivity platform designed to speed up technical workflows.</p>
-            <div class="work-tags"><span>AI</span><span>APIs</span><span>Automation</span></div>
-            <div class="work-links">
-              <a href="/work/chatre/" class="work-link" data-hover>Read the case study &rarr;</a>
-              <a href="#contact" class="work-link work-link-ext" data-hover>Discuss a build &rarr;</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-panel" data-reveal>
-          <span class="work-num">04</span>
-          <div class="work-visual wv-webstudio">
-            <svg class="work-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
-          </div>
-          <div class="work-info">
-            <h3>Re-EL WebStudio</h3>
-            <p class="work-cat">Website Creation Platform</p>
-            <p>An internal platform for designing and shipping client websites faster, without losing quality.</p>
-            <div class="work-tags"><span>React</span><span>Design Systems</span><span>Automation</span></div>
-            <div class="work-links">
-              <a href="/work/webstudio/" class="work-link" data-hover>Read the case study &rarr;</a>
-              <a href="#contact" class="work-link work-link-ext" data-hover>Discuss a build &rarr;</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-panel" data-reveal>
-          <span class="product-num">05</span>
-          <div class="product-visual pv-laundry">
-            <svg class="product-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><path d="M12 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
-            <span class="pv-label">LaundroMaster · Marketplace</span>
-          </div>
-          <div class="product-info">
-            <h3>LaundroMaster</h3>
-            <p class="product-cat">Connecting businesses with opportunities</p>
-            <p>Find nearby laundromats, compare prices & turnaround, schedule pickup, pay securely, track every stage. Laundromats onboard as tenants. Live at laundromaster.re-el.co.za.</p>
-            <div class="audience-tabs" x-data="{ tab: 'tenants' }">
-              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'tenants' }" @click="tab = 'tenants'">For Tenants</button>
-              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'customers' }" @click="tab = 'customers'">For Customers</button>
-              <div class="tab-panel" x-show="tab === 'tenants'"><ul><li>List services, prices & turnaround</li><li>Receive bookings + secure payments</li><li>Onboarding & support by Re-EL</li></ul></div>
-              <div class="tab-panel" x-show="tab === 'customers'"><ul><li>Find nearby laundromats, compare & book</li><li>Schedule pickup, track every stage</li><li>Free delivery for members</li></ul></div>
-            </div>
-            <div class="dual-ctas">
-              <a href="/products/laundromaster/" class="btn btn-primary btn-small" data-hover>View Product</a>
-              <a href="https://laundromaster.re-el.co.za/apps/customer/" target="_blank" rel="noopener" class="work-link work-link-ext" data-hover>Open live app &rarr;</a>
-              <a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, I own a laundry and want to join LaundroMaster as a tenant." class="btn btn-ghost btn-small" data-hover>Join as Tenant</a>
-              <a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, I want to use LaundroMaster as a customer." class="btn btn-ghost btn-small" data-hover>I am a Customer</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-panel" data-reveal>
-          <span class="product-num">06</span>
-          <div class="product-visual pv-ecd">
-            <svg class="product-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10 12 4l9 6v8a1 1 0 0 1-1 1h-4v-6h-8v6H4a1 1 0 0 1-1-1z"/></svg>
-            <span class="pv-label">Re-EL ECD · Early Years</span>
-          </div>
-          <div class="product-info">
-            <h3>Re-EL ECD</h3>
-            <p class="product-cat">Empowering early childhood development</p>
-            <p>Enrolment, learners, curriculum, assessments, attendance, finance, safety & parent comms — one workspace for daycare centres. Live at ecd.re-el.co.za.</p>
-            <div class="audience-tabs" x-data="{ tab: 'centres' }">
-              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'centres' }" @click="tab = 'centres'">For Centres</button>
-              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'educators' }" @click="tab = 'educators'">For Educators</button>
-              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'parents' }" @click="tab = 'parents'">For Parents</button>
-              <div class="tab-panel" x-show="tab === 'centres'"><ul><li>Enrolment, fees & finance in one place</li><li>Attendance, staff & safety records</li><li>Parent comms without chaos</li></ul></div>
-              <div class="tab-panel" x-show="tab === 'educators'"><ul><li>Curriculum, assessments & class lists</li><li>Less admin, more teaching</li></ul></div>
-              <div class="tab-panel" x-show="tab === 'parents'"><ul><li>Your child's progress, attendance & updates</li></ul></div>
-            </div>
-            <div class="dual-ctas">
-              <a href="/products/re-el-ecd/" class="btn btn-primary btn-small" data-hover>View Product</a>
-              <a href="https://ecd.re-el.co.za" target="_blank" rel="noopener" class="work-link work-link-ext" data-hover>Open live app &rarr;</a>
-              <a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, I run an ECD centre and want to onboard to Re-EL ECD." class="btn btn-ghost btn-small" data-hover>Onboard My Centre</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-panel" data-reveal>
-          <span class="product-num">07</span>
-          <div class="product-visual pv-clock">
-            <svg class="product-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7 12 13 2 7"/></svg>
-            <span class="pv-label">Re-EL Mailer · Business Email</span>
-          </div>
-          <div class="product-info">
-            <h3>Re-EL Mailer</h3>
-            <p class="product-cat">Professional business email</p>
-            <p>Professional email on your domain — setup, hosting and support by Re-EL. Live at mailer.re-el.co.za.</p>
-            <div class="for-whom"><span>For Businesses</span></div>
-            <div class="dual-ctas">
-              <a href="https://mailer.re-el.co.za" target="_blank" rel="noopener" class="btn btn-primary btn-small" data-hover>Open Mailer</a>
-              <a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, I want professional business email for my company." class="btn btn-ghost btn-small" data-hover>Get Business Email</a>
-            </div>
-          </div>
-        </article>
-
+      <p class="eyebrow" data-reveal>OUR PROJECTS</p>
+      <h2 class="section-title" data-reveal="split">Real products. Real systems.</h2>
+      <p class="lead" data-reveal>Excellence in every step — tap Learn More to open the product or live app.</p>
+      <div class="proj-grid">
+        <article class="proj" data-reveal><div class="proj-visual"><svg class="work-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6h4"/></svg></div><div class="proj-body"><h3>Clock-Kit</h3><p>Location-aware clocking, offline sync, leave & shifts, signed timesheets.</p><a href="/products/clock-kit/" data-hover>Learn More &rarr;</a> &nbsp; <a href="https://www.clock-kit.rf.gd/" target="_blank" rel="noopener" data-hover>Live &rarr;</a></div></article>
+        <article class="proj" data-reveal><div class="proj-visual alt"><svg class="work-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/></svg></div><div class="proj-body"><h3>LaundroMaster</h3><p>Find, compare, book pickup, pay securely, track every stage.</p><a href="/products/laundromaster/" data-hover>Learn More &rarr;</a> &nbsp; <a href="https://laundromaster.re-el.co.za/apps/customer/" target="_blank" rel="noopener" data-hover>Live &rarr;</a></div></article>
+        <article class="proj" data-reveal><div class="proj-visual"><svg class="work-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10 12 4l9 6v8a1 1 0 0 1-1 1h-4v-6h-8v6H4a1 1 0 0 1-1-1z"/></svg></div><div class="proj-body"><h3>Re-EL ECD</h3><p>Enrolment, learners, curriculum, assessments, attendance, finance, parents.</p><a href="/products/re-el-ecd/" data-hover>Learn More &rarr;</a> &nbsp; <a href="https://ecd.re-el.co.za" target="_blank" rel="noopener" data-hover>Live &rarr;</a></div></article>
+        <article class="proj" data-reveal><div class="proj-visual alt"><svg class="work-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7 12 13 2 7"/></svg></div><div class="proj-body"><h3>Re-EL Mailer</h3><p>Professional business email on your domain — setup and support.</p><a href="/products/mailer/" data-hover>Learn More &rarr;</a> &nbsp; <a href="https://mailer.re-el.co.za" target="_blank" rel="noopener" data-hover>Open &rarr;</a></div></article>
+        <article class="proj" data-reveal><div class="proj-visual"><svg class="work-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l4 4v14a2 2 0 0 1-2 2z"/><path d="M14 2v4h4"/></svg></div><div class="proj-body"><h3>Re-V</h3><p>CV generation that builds professional, structured CVs.</p><a href="/work/re-v/" data-hover>Learn More &rarr;</a></div></article>
+        <article class="proj" data-reveal><div class="proj-visual alt"><svg class="work-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg></div><div class="proj-body"><h3>Chatre</h3><p>AI-powered productivity for technical workflows.</p><a href="/work/chatre/" data-hover>Learn More &rarr;</a></div></article>
       </div>
     </div>
   </section>
 
-
-
-  <div class="audience-banner container" style="padding-bottom:40px;">
-    <div class="aud tenant" data-reveal>
-      <h3>Businesses &amp; tenants — start here</h3>
-      <p>Run a team, a laundry, or an ECD centre? Talk to us first. We scope onboarding, training and go-live — then support you after launch.</p>
-      <a href="#contact" class="btn btn-primary btn-small" data-hover>Talk to Re-EL</a>
+  <!-- ================= ABOUT US (id=about) ================= -->
+  <section class="corp-about" id="about">
+    <div class="container corp-about-grid">
+      <div data-reveal>
+        <p class="eyebrow">ABOUT US</p>
+        <h2 class="section-title" data-reveal="split">Delivering innovative solutions with quality and dedication.</h2>
+        <p>Re-EL Branding &amp; Technologies designs, builds and supports software, web, automation and AI that turn business problems into scalable technology. We value outcomes over adjectives — tested, accessible, supported after launch.</p>
+        <p><strong>Mission:</strong> high-quality technology that creates real opportunity.<br/><strong>Vision:</strong> a leading South African technology company delivering at national and international level.<br/><strong>Values:</strong> honesty, quality, innovation, teamwork.</p>
+        <div class="corp-actions" style="margin-top:24px;">
+          <a href="/products/" class="btn btn-quote" data-hover>Explore Products</a>
+          <a href="/#contact" class="btn btn-ghost" data-hover style="color:#1E3A6E;border-color:#1E3A6E;">Contact Us</a>
+        </div>
+      </div>
+      <div class="about-visual" data-reveal>
+        <img src="assets/img/re-el-logo.jpg" alt="Re-EL Branding & Technologies logo" width="180" height="180" loading="lazy" decoding="async" />
+        <p style="color:#3B4A6B;font-family:var(--font-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;">Technology that moves businesses forward.</p>
+      </div>
     </div>
-    <div class="aud" data-reveal>
-      <h3>Users, staff &amp; parents — join your platform</h3>
-      <p>Clock in, book a wash, or follow your child's progress. Join through your organisation or message us on WhatsApp and we will get you in.</p>
-      <a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, I want to join a Re-EL product as a user." class="btn btn-ghost btn-small" data-hover>Get Access</a>
-    </div>
-  </div>
+  </section>
 
-  <!-- ================= RESULTS / OUTCOMES ================= -->
-  <section class="section section-light" id="results">
+  <!-- ================= BUSINESS PARTNERS ================= -->
+  <section class="corp-partners" aria-label="Product family">
+    <div class="container">
+      <p class="eyebrow" data-reveal>PRODUCT FAMILY</p>
+      <h2 class="section-title" data-reveal="split">Our valued product family.</h2>
+      <div class="partner-row" data-reveal>
+        <span class="partner-pill">Clock-Kit</span><span class="partner-pill">LaundroMaster</span><span class="partner-pill">Re-EL ECD</span><span class="partner-pill">Re-EL Mailer</span><span class="partner-pill">Re-V</span><span class="partner-pill">Chatre</span><span class="partner-pill">Re-EL WebStudio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS (id=results) ================= -->
+  <section class="corp-testimonials section-light" id="results">
     <div class="container">
       <p class="eyebrow" data-reveal>QUALITY RESULTS</p>
       <h2 class="section-title" data-reveal="split">Real products. Real results.</h2>
-      <p class="lead" data-reveal>Real products, real numbers. Tested, accessible, supported after launch.</p>
       <div class="stats-row">
         <div class="stat" data-reveal><strong><span data-count="99" data-suffix="%+">0</span></strong><span>Uptime target</span></div>
         <div class="stat" data-reveal><strong><span data-count="48" data-suffix="h">0</span></strong><span>Support response</span></div>
-        <div class="stat" data-reveal><strong><span data-count="100" data-suffix="%">0</span></strong><span>Custom-built, no templates</span></div>
-        <div class="stat" data-reveal><strong><span data-count="7" data-suffix="-step">0</span></strong><span>From discovery to support</span></div>
+        <div class="stat" data-reveal><strong><span data-count="100" data-suffix="%">0</span></strong><span>Custom-built</span></div>
+        <div class="stat" data-reveal><strong><span data-count="7" data-suffix="-step">0</span></strong><span>Discovery to support</span></div>
       </div>
-      <div class="results-grid">
-        <article class="result-card" data-reveal><div class="r-metric">Clock-Kit</div><h3>Attendance you can trust</h3><p>Structured clock-in/out replaces paper registers and spreadsheets. Managers get period reporting without rebuilding data by hand — payroll starts from a complete record, not a memory exercise.</p></article>
-        <article class="result-card" data-reveal><div class="r-metric">LaundroMaster</div><h3>Tenants + customers, connected</h3><p>Laundry businesses onboard as tenants, list their services, and receive bookings. Customers find, book and pay nearby providers — both sides onboarded in days, with support after launch.</p></article>
-        <article class="result-card" data-reveal><div class="r-metric">Re-EL ECD</div><h3>Centres that thrive</h3><p>ECD centres and educators get tools for records, enrolment and parent communication. Parents stay informed; centres spend less time on admin and more time on children's development.</p></article>
-        <article class="result-card" data-reveal><div class="r-metric">Every build</div><h3>Built to a standard</h3><p>Semantic markup, keyboard access, self-hosted assets, structured data, Core Web Vitals budgets — shipped on every Re-EL project, not sold as extras.</p></article>
-      </div>
-      <div class="before-after" data-reveal>
-        <div class="ba before"><h4>Before Re-EL</h4><ul><li>Paper registers, chats and spreadsheets</li><li>Manual reporting rebuilt every pay cycle</li><li>Systems that don't talk to each other</li><li>No support after deployment</li></ul></div>
-        <div class="ba after"><h4>With Re-EL</h4><ul><li>Structured records, clear reporting</li><li>Automated workflows, connected tools</li><li>Interfaces designed around real users</li><li>Ongoing support, updates and training</li></ul></div>
-      </div>
-      <div class="quality-checks">
-        <div class="qcheck" data-reveal><h3>Test before users do</h3><p>Validation, empty states, error states and edge cases are part of the build — not an afterthought.</p></div>
-        <div class="qcheck" data-reveal><h3>Accessible by default</h3><p>Keyboard navigation, focus states, contrast and reduced-motion support on every interface.</p></div>
-        <div class="qcheck" data-reveal><h3>Supported after launch</h3><p>Technology doesn't stop at deployment. Maintenance, fixes and improvements continue monthly.</p></div>
+      <div class="testi-grid">
+        <article class="testi" data-reveal><p>"Every clock is timestamped by the server. Our timesheets are finally accurate — disputes are gone."</p><strong>Operations Manager</strong><span>Clock-Kit · Employer</span></article>
+        <article class="testi" data-reveal><p>"Bookings come in without phone tag. Customers see prices and turnaround before they book."</p><strong>Laundry Owner</strong><span>LaundroMaster · Tenant</span></article>
+        <article class="testi" data-reveal><p>"Enrolment, attendance and parent updates in one place. We spend less time on admin, more time on children."</p><strong>Principal</strong><span>Re-EL ECD · Centre</span></article>
       </div>
     </div>
   </section>
 
-  <!-- ================= SUPPORT PROMISE ================= -->
-  <section class="section section-light" id="support-promise">
-    <div class="container support-grid">
-      <div data-reveal>
-        <p class="eyebrow">AFTER LAUNCH</p>
-        <h2 class="section-title">We stay after we ship.</h2>
-        <p class="lead">Onboarding a new tenant, training a team, or fixing a bug at 2pm on a Tuesday — that's where trust is built. Re-EL support starts at R2,500/month with a 24–48 hour response target.</p>
-        <div class="dual-ctas">
-          <a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, I need support for a product I run." class="btn btn-primary btn-small" data-hover>WhatsApp Support</a>
-          <a href="/services/tech-support/" class="btn btn-ghost btn-small" data-hover>See support plans</a>
-        </div>
-      </div>
-      <ul class="support-list" data-reveal>
-        <li><i aria-hidden="true"></i>Bug fixing and incident response with clear reporting</li>
-        <li><i aria-hidden="true"></i>Monthly updates, security patches and optimisation</li>
-        <li><i aria-hidden="true"></i>Onboarding and training for tenants, staff and end-users</li>
-        <li><i aria-hidden="true"></i>Continuous improvement as your business grows</li>
-        <li><i aria-hidden="true"></i>Direct line: info@re-el.co.za · +27 81 386 4024</li>
-      </ul>
-    </div>
-  </section>
-  <!-- ================= PROCESS ================= -->
+  <!-- ================= PROCESS (id=process) ================= -->
   <section class="section section-light" id="process">
     <div class="container">
       <p class="eyebrow" data-reveal>HOW WE WORK</p>
       <h2 class="section-title" data-reveal="split">A clear process, from discovery to support.</h2>
-
       <div class="timeline">
         <div class="timeline-line"><div class="timeline-line-fill" id="timelineFill"></div></div>
         <div class="timeline-steps">
@@ -923,95 +603,27 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT / BRAND STORY ================= -->
-  <section class="section section-dark" id="about">
-    <div class="container about-grid">
-      <div data-reveal>
-        <p class="eyebrow">ABOUT RE-EL</p>
-        <h2 class="section-title">Technology. Creativity. Engineering.</h2>
-        <p class="lead">
-          Re-EL combines software engineering, web development, design, automation
-          and technical support with a distinctly South African technology identity.
-          We don't just write code — we understand the business problem first.
-        </p>
-        <p class="lead soft">
-          The scarab represents movement, transformation and the continuous creation
-          of value. Re-EL applies the same principle to technology — taking ideas,
-          challenges and processes and turning them into useful digital systems.
-        </p>
-      </div>
-      <div class="flow-diagram" data-reveal>
-        <div class="flow-step">IDEA</div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step">DESIGN</div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step">CODE</div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step">SYSTEM</div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step flow-final">IMPACT</div>
-      </div>
-
-      <figure class="reel-figure" data-reveal>
-        <picture class="reel-frame" data-media>
-          <source type="image/webp" srcset="assets/media/about-figure-640.webp 640w, assets/media/about-figure-1280.webp 1280w" sizes="(max-width:1024px) calc(100vw - 48px), 1152px" />
-          <img src="assets/media/about-figure-1280.jpg" alt="Silhouette of an engineer at a workstation lit by screen glow in a darkened room." width="1280" height="720" loading="lazy" decoding="async" />
-        </picture>
-        <figcaption>Technology built by people who understand the business first.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ================= AI SECTION ================= -->
-  <section class="section" id="ai">
-    <div class="section-media" data-media aria-hidden="true">
-      <picture>
-        <source type="image/webp" srcset="assets/media/bg-ai-640.webp" />
-        <img src="assets/media/bg-ai-640.jpg" alt="" width="640" height="360" loading="lazy" decoding="async" />
-      </picture>
-    </div>
+  <!-- ================= BLOG (Insights) ================= -->
+  <section class="corp-blog" aria-label="Insights">
     <div class="container">
-      <p class="eyebrow" data-reveal>INSIDE THE STACK</p>
-      <h2 class="section-title" data-reveal="split">AI & Intelligent Automation</h2>
-      <p class="lead center" data-reveal>AI isn't a separate product line — it's one capability inside the Re-EL technology stack.</p>
-
-      <div class="ai-grid">
-        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg><span>AI Integrations</span></div>
-        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg><span>AI Assistants</span></div>
-        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg><span>Workflow Automation</span></div>
-        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><span>Document Processing</span></div>
-        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg><span>Intelligent Search</span></div>
-        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg><span>Chatbot Systems</span></div>
-        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg><span>API-Connected AI</span></div>
-        <div class="ai-item" data-reveal><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 10.27 7 3.34"/><path d="m11 13.73-4 6.93"/><path d="M12 22v-2"/><path d="M12 2v2"/><path d="M14 12h8"/><path d="m17 20.66-1-1.73"/><path d="m17 3.34-1 1.73"/><path d="M2 12h2"/><path d="m20.66 17-1.73-1"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m3.34 7 1.73 1"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="8"/></svg><span>Business Process Automation</span></div>
+      <p class="eyebrow" data-reveal>BLOG</p>
+      <h2 class="section-title" data-reveal="split">Notes on building technology.</h2>
+      <div class="blog-grid">
+        <article class="blog-card" data-reveal><div class="blog-top">Costs</div><div class="blog-body"><h3>How much does a website cost in South Africa?</h3><p>Websites from R2,500, applications from R5,000 — what actually moves the number.</p><a href="/insights/website-cost-south-africa/" data-hover>Read &rarr;</a></div></article>
+        <article class="blog-card" data-reveal><div class="blog-top">Quality</div><div class="blog-body"><h3>Why we test before users do</h3><p>Empty states, error states and edge cases are part of every Re-EL build.</p><a href="/insights/" data-hover>Read &rarr;</a></div></article>
+        <article class="blog-card" data-reveal><div class="blog-top">Results</div><div class="blog-body"><h3>Real products, real results</h3><p>Clock-Kit, LaundroMaster and Re-EL ECD — solved problems, measured.</p><a href="/results/" data-hover>See results &rarr;</a></div></article>
       </div>
     </div>
   </section>
 
-  <!-- ================= WHY RE-EL ================= -->
-  <section class="section section-dark" id="why">
-    <div class="container">
-      <p class="eyebrow" data-reveal>WHY RE-EL</p>
-      <h2 class="section-title" data-reveal="split">Six principles behind every project.</h2>
-      <div class="why-grid">
-        <div class="why-card" data-reveal><h3>Business First</h3><p>Technology must solve an actual business problem.</p></div>
-        <div class="why-card" data-reveal><h3>Built Around You</h3><p>Solutions are designed around your workflow.</p></div>
-        <div class="why-card" data-reveal><h3>Scalable</h3><p>Build today with tomorrow in mind.</p></div>
-        <div class="why-card" data-reveal><h3>Practical</h3><p>Avoid unnecessary complexity.</p></div>
-        <div class="why-card" data-reveal><h3>Support</h3><p>Technology doesn't stop at deployment.</p></div>
-        <div class="why-card" data-reveal><h3>Continuous Improvement</h3><p>Systems evolve as your business grows.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PRICING TEASER ================= -->
+  <!-- ================= PRICING (id=pricing) ================= -->
   <section class="section section-light" id="pricing">
     <div class="container pricing-grid">
       <div data-reveal>
         <p class="eyebrow">INVESTMENT</p>
         <h2 class="section-title">Every project is different.</h2>
-        <p class="lead">We provide transparent estimates based on scope, complexity and requirements — no generic one-size-fits-all pricing.</p>
-        <a href="#contact" class="btn btn-primary" data-hover>Request a Quote</a>
+        <p class="lead">Transparent estimates based on scope, complexity and requirements.</p>
+        <a href="#contact" class="btn btn-quote" data-hover>Request a Quote</a>
       </div>
       <ul class="price-list" data-reveal>
         <li><span>Websites</span><strong>R2,500+</strong></li>
@@ -1022,79 +634,48 @@
     </div>
   </section>
 
-  <!-- ================= FAQ ================= -->
+  <!-- ================= FAQ (id=faq) ================= -->
   <section class="section section-light" id="faq">
     <div class="container">
       <p class="eyebrow" data-reveal>COMMON QUESTIONS</p>
       <h2 class="section-title" data-reveal="split">Questions, answered.</h2>
       <div class="faq-grid">
-      <article class="faq-item" data-reveal>
-        <h3>How much does a website cost in South Africa?</h3>
-        <p>Re-EL projects start at R2,500 for a website, R5,000 for an application, R1,500 for automation and R2,500 per month for support. Every quote is scoped to your brief, so the final figure follows scope, complexity and requirements rather than a generic one-size-fits-all price.</p>
-      </article>
-      <article class="faq-item" data-reveal>
-        <h3>What is the difference between the four tiers?</h3>
-        <p>Websites covers corporate sites, landing pages and web apps engineered for performance and conversion. Applications covers custom platforms, business systems and internal tools. Automation covers repetitive workflow automation. Support covers ongoing maintenance, bug fixing and optimisation after launch.</p>
-      </article>
-      <article class="faq-item" data-reveal>
-        <h3>Do you build custom software or use templates?</h3>
-        <p>Custom. Platforms, business systems and internal tools are built around how your company actually works, and the interface is designed around real users so it feels fast, clear and trustworthy.</p>
-      </article>
-      <article class="faq-item" data-reveal>
-        <h3>Can you connect the tools we already use?</h3>
-        <p>Yes. API and integration work connects payments, CRMs, databases and third-party services to whatever we build, so your systems stop living in separate tabs.</p>
-      </article>
-      <article class="faq-item" data-reveal>
-        <h3>What happens after the site or system goes live?</h3>
-        <p>Technology does not stop at deployment. The support engagement covers ongoing maintenance, bug fixing and optimisation, starting at R2,500 per month.</p>
-      </article>
-      <article class="faq-item" data-reveal>
-        <h3>How do we start a project?</h3>
-        <p>Send the enquiry form below or message Re-EL on WhatsApp. The first step is a short scoping conversation so the problem is understood before anything is quoted.</p>
-      </article>
+        <article class="faq-item" data-reveal><h3>How much does a website cost in South Africa?</h3><p>Websites from R2,500, applications from R5,000, automation from R1,500, support from R2,500/mo. Every quote is scoped to your brief.</p></article>
+        <article class="faq-item" data-reveal><h3>Do you build custom software or use templates?</h3><p>Custom. Platforms are built around how your company actually works.</p></article>
+        <article class="faq-item" data-reveal><h3>How do users join your products?</h3><p>Through your organisation (employer, laundry tenant, ECD centre) or via WhatsApp — we onboard 1-2-3.</p></article>
+        <article class="faq-item" data-reveal><h3>What happens after launch?</h3><p>Support continues: maintenance, bug fixing and optimisation from R2,500/month.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- ================= CTA ================= -->
+  <!-- ================= CTA (id=cta) ================= -->
   <section class="cta-section scarab-cta" id="cta">
-    <div class="section-media" data-media aria-hidden="true">
-      <picture>
-        <source type="image/webp" srcset="assets/media/bg-cta-640.webp" />
-        <img src="assets/media/bg-cta-640.jpg" alt="" width="640" height="360" loading="lazy" decoding="async" />
-      </picture>
-    </div>
     <div class="container">
-      <h2 data-reveal>Imagine what we can build.</h2>
-      <p data-reveal>Real products. Real problems. Solved.</p>
+      <h2 data-reveal>Let's build your future project together.</h2>
+      <p data-reveal>Ready to start? Contact us today and let's bring your vision to life.</p>
       <svg class="scarab-line" viewBox="0 0 720 80" aria-hidden="true" focusable="false"><path d="M20,65 C120,10 220,75 360,40 C500,10 600,70 700,30"/><circle cx="700" cy="30" r="5" fill="var(--re-yellow)"/></svg>
       <p class="scarab-flow"><span>IDEA</span><b>&rarr;</b><span>DESIGN</span><b>&rarr;</b><span>CODE</span><b>&rarr;</b><span>SYSTEM</span><b>&rarr;</b><span>IMPACT</span></p>
       <div class="hero-cta" data-reveal>
-        <a href="#contact" class="btn btn-primary" data-hover>Start a Project</a>
+        <a href="#contact" class="btn btn-quote" data-hover>Contact Us</a>
         <a href="mailto:info@re-el.co.za" class="btn btn-ghost" data-hover>Email Re-EL</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
+  <!-- ================= CONTACT (id=contact) ================= -->
   <section class="section section-dark" id="contact">
     <div class="container contact-grid">
       <div data-reveal>
-        <p class="eyebrow">REQUEST A CONSULTATION</p>
-        <h2 class="section-title">Let's build something.</h2>
-        <p class="lead">Tell us about your project and we'll get back to you with next steps.</p>
+        <p class="eyebrow">CONTACT US</p>
+        <h2 class="section-title">Have questions or need assistance?</h2>
+        <p class="lead">Fill out the form — or reach us directly.</p>
         <div class="contact-meta">
           <a href="mailto:info@re-el.co.za" data-hover><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> info@re-el.co.za</a>
           <a href="https://wa.me/27813864024" target="_blank" rel="noopener" data-hover><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg> WhatsApp +27 81 386 4024</a>
         </div>
+        <p class="lead" style="margin-top:24px;">Working hours: Monday to Friday, 9 AM – 6 PM. Saturday &amp; holidays: email only.</p>
       </div>
-
-      <form id="contactForm" class="contact-form" data-reveal
-            action="https://formsubmit.co/info@re-el.co.za" method="POST"
-            novalidate data-endpoint="https://formsubmit.co/ajax/info@re-el.co.za">
-        <!-- FormSubmit posts to this endpoint with no account. The first
-             submission sends an activation link to info@re-el.co.za — click
-             it once before going live. Without JS the form still POSTs here. -->
+      <form id="contactForm" class="contact-form" data-reveal action="https://formsubmit.co/info@re-el.co.za" method="POST" novalidate data-endpoint="https://formsubmit.co/ajax/info@re-el.co.za">
         <input type="hidden" name="_next" value="https://www.re-el.co.za/thank-you.html" />
         <input type="hidden" name="_template" value="table" />
         <input type="text" name="company_website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -1130,13 +711,11 @@
               <option>Other</option>
             </select>
           </label>
-          <label>Budget
-            <input type="text" name="budget" autocomplete="off" placeholder="e.g. R10,000 - R30,000" />
-          </label>
+          <label>Budget<input type="text" name="budget" autocomplete="off" placeholder="e.g. R10,000 - R30,000" /></label>
         </div>
-        <label>Project Description<span class="req" aria-hidden="true">*</span><textarea name="message" rows="4" required></textarea></label>
+        <label>Message<span class="req" aria-hidden="true">*</span><textarea name="message" rows="4" required></textarea></label>
         <label>Timeline<input type="text" name="timeline" autocomplete="off" placeholder="e.g. 4-6 weeks" /></label>
-        <button type="submit" class="btn btn-primary" data-hover>Send Enquiry <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+        <button type="submit" class="btn btn-primary" data-hover>Send Message <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
         <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -1145,7 +724,7 @@
 </main>
 
 <!-- ================= FOOTER ================= -->
-<footer class="footer">
+<footer class="footer light-footer">
   <div class="container footer-grid">
     <div>
       <div class="footer-logo-wrap">
@@ -1166,15 +745,23 @@
       <a href="/services/branding/">Branding &amp; Graphics</a>
     </div>
     <div>
-      <h2>Products</h2>
+      <h2>Useful Links</h2>
+      <a href="/#about">About Us</a>
+      <a href="/#process">How we work</a>
+      <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <div>
+      <h2>Content</h2>
       <a href="/products/clock-kit/">Clock-Kit</a>
       <a href="/products/laundromaster/">LaundroMaster</a>
       <a href="/products/re-el-ecd/">Re-EL ECD</a>
       <a href="/products/">All Products</a>
       <a href="/results/">Results</a>
+      <a href="/insights/">Blog</a>
     </div>
     <div>
-      <h2>Company</h2>
+      <h2>Address</h2>
       <a href="#about">About</a>
       <a href="/work/">Work</a>
       <a href="#process">Process</a>

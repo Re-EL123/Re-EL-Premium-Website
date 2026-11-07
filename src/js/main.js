@@ -676,53 +676,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-   SPIRAL FLUX — drag/wheel/buttons + auto-rotate (V3.13)
-   ============================================================ */
-document.addEventListener('DOMContentLoaded', () => {
-  const stage = document.querySelector('#spiralStage');
-  const ring = document.querySelector('#spiralRing');
-  if (!stage || !ring) return;
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let angle = 0, dragging = false, startX = 0, auto = !reduced;
-  const SPEED = 0.12; // deg per frame
-  function render() { ring.style.transform = `rotateX(-6deg) rotateY(${angle}deg)`; }
-  render();
-  // Auto-rotate (paused while dragging/hovering)
-  let raf = null;
-  if (auto) {
-    const tick = () => {
-      if (!dragging && !document.hidden) { angle -= SPEED; render(); }
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-  }
-  // Drag
-  const onDown = e => { dragging = true; startX = e.clientX ?? (e.touches && e.touches[0].clientX); };
-  const onMove = e => {
-    if (!dragging) return;
-    const x = e.clientX ?? (e.touches && e.touches[0].clientX);
-    if (x == null || startX == null) return;
-    angle += (x - startX) * 0.4;
-    startX = x; render();
-  };
-  const onUp = () => { dragging = false; startX = null; };
-  stage.addEventListener('pointerdown', onDown);
-  window.addEventListener('pointermove', onMove, { passive: true });
-  window.addEventListener('pointerup', onUp);
-  stage.addEventListener('pointerleave', onUp);
-  // Buttons step 60deg
-  const prev = document.querySelector('#spiralPrev');
-  const next = document.querySelector('#spiralNext');
-  if (prev) prev.addEventListener('click', () => { angle += 60; render(); });
-  if (next) next.addEventListener('click', () => { angle -= 60; render(); });
-  // Pause when far off-screen (CPU)
-  if ('IntersectionObserver' in window && raf) {
-    new IntersectionObserver(([e]) => {
-      auto = e.isIntersecting && !reduced;
-    }, { threshold: 0 }).observe(stage);
-  }
-});
-
 /* ============================================================
    ORBIT DECK — centre + leaning sides, drag/dots/auto (V3.14)
    ============================================================ */

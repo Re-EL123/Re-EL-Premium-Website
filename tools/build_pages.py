@@ -167,13 +167,26 @@ def service_icon(name):
 
 
 def work_icon(marker):
-    """SVG that opens the work-visual block containing `marker`."""
-    i = SRC.index(marker)
-    chunk = SRC[:i]
-    start = chunk.rindex('<div class="work-visual')
-    seg = SRC[start:i]
-    m = re.search(r"(<svg[^>]*>.*?</svg>)", seg, re.S)
-    return m.group(1) if m else ""
+    """SVG inside the work-visual block whose class matches the marker slug.
+    Videos were replaced by animated icons (V2.1), so look up by class, not media."""
+    slug_map = {
+        "work-clockkit-poster.jpg": "wv-clockkit",
+        "work-rev-poster.jpg": "wv-rev",
+        "work-chatre-poster.jpg": "wv-chatre",
+        "work-webstudio-poster.jpg": "wv-webstudio",
+    }
+    cls = slug_map.get(marker, "")
+    if cls:
+        m = re.search(r'<div class="work-visual ' + re.escape(cls) + r'">(.*?)<div class="work-info">', SRC, re.S)
+        if m:
+            svg = re.search(r"(<svg[^>]*>.*?</svg>)", m.group(1), re.S)
+            if svg:
+                return svg.group(1)
+    m = re.search(r'<div class="work-visual[^"]*"><svg[^>]*>.*?</svg>', SRC, re.S)
+    if m:
+        svg = re.search(r"(<svg[^>]*>.*?</svg>)", m.group(0), re.S)
+        return svg.group(1) if svg else ""
+    return ""
 
 
 # --------------------------------------------------------------------------

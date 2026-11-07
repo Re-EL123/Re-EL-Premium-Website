@@ -1104,3 +1104,12 @@ input,select,textarea{font-family:inherit;}
 @media(max-width:1024px){
   .corp-testimonials{background-attachment:scroll;}
 }
+
+/* FAQ (Common Questions) — same textured photo background as Results */
+#faq{
+  background-image:linear-gradient(180deg,rgba(244,247,255,.96) 0%,rgba(244,247,255,.88) 100%),url("/assets/img/bg-results.jpg");
+  background-size:cover;background-position:center;background-attachment:fixed;
+}
+@media(max-width:1024px){
+  #faq{background-attachment:scroll;}
+}

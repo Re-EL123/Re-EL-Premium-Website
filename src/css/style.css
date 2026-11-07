@@ -1171,3 +1171,15 @@ input,select,textarea{font-family:inherit;}
 @media(prefers-reduced-motion: reduce){
   .float-badge,.hero-photo{animation:none;}
 }
+
+/* Animated "we can build" — golden shimmer while cycling */
+.word-cycle{
+  color:#B89301;
+  background:linear-gradient(90deg,#B89301 0%,#F6C945 45%,#B89301 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:goldShine 3s linear infinite;
+  display:inline-block;white-space:nowrap;
+}
+@keyframes goldShine{to{background-position:200% center;}}

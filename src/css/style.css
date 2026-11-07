@@ -1276,3 +1276,33 @@ input,select,textarea{font-family:inherit;}
   .spiral-card{width:230px;}
   .spiral-ring{width:230px;}
 }
+
+/* ============================================================
+   ORBIT DECK for OUR PROJECTS (Horizon-style, V3.14)
+   Centre card large + warm yellow gradient; sides lean back.
+   ============================================================ */
+.orbit-deck{position:relative;}
+.orbit-viewport{
+  position:relative;height:480px;perspective:1200px;
+  overflow:hidden;touch-action:pan-y;cursor:grab;
+}
+.orbit-viewport:active{cursor:grabbing;}
+.orbit-card{
+  position:absolute;top:24px;left:50%;width:320px;margin-left:-160px;
+  transition:transform .7s cubic-bezier(.16,.84,.44,1),opacity .7s,box-shadow .7s;
+  transform-style:preserve-3d;will-change:transform;
+}
+.orbit-card.is-center{
+  box-shadow:0 28px 70px rgba(15,23,48,.2),0 0 0 3px #D6AE01;
+}
+.orbit-card.is-side{opacity:.85;}
+.orbit-card.is-hidden{opacity:0;pointer-events:none;}
+.orbit-card.is-center .proj-visual{background:linear-gradient(135deg,#D6AE01,#F6C945);}
+.orbit-card.is-center .proj-visual img{filter:brightness(1.05);}
+@media(max-width:900px){
+  .orbit-card{width:280px;margin-left:-140px;}
+  .orbit-viewport{height:460px;}
+}
+@media(max-width:640px){
+  .orbit-card{width:240px;margin-left:-120px;}
+}

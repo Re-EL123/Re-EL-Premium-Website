@@ -749,3 +749,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0 }).observe(stage);
   }
 });
+
+/* ============================================================
+   ORBIT DECK — centre + leaning sides, drag/dots/auto (V3.14)
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  const deck = document.querySelector('#orbitDeck');
+  if (!deck) return;
+  const cards = Array.from(deck.querySelectorAll('.orbit-card'));
+  const dotsBox = document.querySelector('#orbitDots');
+  const dots = dotsBox ? Array.from(dotsBox.children) : [];
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const N = cards.length;
+  let active = 0, autoTimer = null;
+  const RADIUS_X = () => Math.min(380, window.innerWidth * 0.32);
+  function render() {
+    cards.forEach((c, i) => {
+      const step = ((i - active) % N + N) % N; // 0..N-1
+      const off = step > N / 2 ? step - N : step; // -3..3
+      const x = off * RADIUS_X();
+      const z = -Math.abs(off) * 140;
+      const rotY = off === 0 ? 0 : (off < 0 ? 28 : -28);
+      const scale = off === 0 ? 1 : 0.82 - Math.abs(off) * 0.06;
+      c.classList.toggle('is-center', off === 0);
+      c.classList.toggle('is-side', off !== 0);
+      c.classList.toggle('is-hidden', Math.abs(off) > 1);
+      c.style.transform = `translateX(calc(-50% + ${x}px)) translateZ(${z}px) rotateY(${rotY}deg) scale(${scale})`;
+      c.style.zIndex = String(10 - Math.abs(off));
+    });
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === active));
+  }
+  const go = d => { active = ((active + d) % N + N) % N; render(); };
+  const restartAuto = () => {
+    if (reduced) return;
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(() => { if (!document.hidden) go(1); }, 4500);
+  };
+  render(); restartAuto();
+  document.querySelector('#orbitPrev')?.addEventListener('click', () => { go(-1); restartAuto(); });
+  document.querySelector('#orbitNext')?.addEventListener('click', () => { go(1); restartAuto(); });
+  dots.forEach((d, i) => d.addEventListener('click', () => { active = i; render(); restartAuto(); }));
+  // Drag horizontally
+  let dx = null;
+  deck.addEventListener('pointerdown', e => { dx = e.clientX; });
+  deck.addEventListener('pointerup', e => {
+    if (dx === null) return;
+    const delta = e.clientX - dx;
+    if (Math.abs(delta) > 40) { go(delta < 0 ? 1 : -1); restartAuto(); }
+    dx = null;
+  });
+  window.addEventListener('resize', render);
+});
+
+/* SCROLL RESTORE FIX — always start at top on refresh (unless deep-linked) */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('load', () => {
+  if (!location.hash) window.scrollTo(0, 0);
+});

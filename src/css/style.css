@@ -1088,3 +1088,9 @@ input,select,textarea{font-family:inherit;}
 .section-light .contact-meta a{color:#1E3A6E;}
 .section-light .contact-meta a:hover{color:#2F5EBB;}
 /* Image-top pattern (navy/blue) already yellow-on-navy — no change */
+
+/* Hero photo (Pexels) in corporate visual */
+.corp-visual .hero-photo{
+  width:100%;height:auto;display:block;border-radius:14px;margin-bottom:16px;
+  aspect-ratio:16/9;object-fit:cover;border:1px solid rgba(255,255,255,.18);
+}

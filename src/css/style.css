@@ -1113,3 +1113,20 @@ input,select,textarea{font-family:inherit;}
 @media(max-width:1024px){
   #faq{background-attachment:scroll;}
 }
+
+/* Textured section backgrounds (V3.7) — white wash keeps text readable */
+#contact{
+  background-image:linear-gradient(180deg,rgba(244,247,255,.96) 0%,rgba(244,247,255,.9) 100%),url("/assets/img/bg-contact.jpg");
+  background-size:cover;background-position:center;background-attachment:fixed;
+}
+#pricing{
+  background-image:linear-gradient(180deg,rgba(244,247,255,.96) 0%,rgba(244,247,255,.88) 100%),url("/assets/img/bg-pricing.jpg");
+  background-size:cover;background-position:center;background-attachment:fixed;
+}
+#process{
+  background-image:linear-gradient(180deg,rgba(244,247,255,.96) 0%,rgba(244,247,255,.88) 100%),url("/assets/img/bg-process.jpg");
+  background-size:cover;background-position:center;background-attachment:fixed;
+}
+@media(max-width:1024px){
+  #contact,#pricing,#process{background-attachment:scroll;}
+}

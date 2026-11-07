@@ -917,6 +917,7 @@ PRODUCTS = [
         tenant_benefits=["Centre admin: enrolment, staff and groups","Records that stay organised and retrievable","Parent communication in one place","Training for educators and admin"],
         user_benefits=["Educators: less admin, clearer records","Parents: stay informed on your child's progress"],
         steps=["Onboard your centre","We configure rooms, staff and enrolment","Go live with parent access"],
+        logo="/assets/img/ecd-logo.png",
         visual="pv-ecd",
     ),
     dict(

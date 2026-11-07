@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .filter(s => s.section);
 
   if(spyTargets.length && 'IntersectionObserver' in window){
-    const hero = $('.hero');
+    const hero = $('.corp-hero') || $('.hero');
     const clearActive = () => navLinks.forEach(l => l.classList.remove('is-active'));
     const setActive = section => {
       navLinks.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === `#${section.id}`));
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if(widest > 0){
         wordEl.style.display = 'inline-block';
         wordEl.style.minWidth = Math.ceil(widest) + 'px';
-        wordEl.style.textAlign = 'right';
+        wordEl.style.textAlign = 'left';
       }
     }catch(e){}
 
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function syncCycle(){ (heroVisible && tabVisible) ? startCycle() : stopCycle(); }
 
-    const hero = $('.hero');
+    const hero = $('.corp-hero') || $('.hero');
     if(hero && 'IntersectionObserver' in window){
       new IntersectionObserver(([entry]) => {
         heroVisible = entry.isIntersecting;

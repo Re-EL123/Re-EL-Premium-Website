@@ -822,3 +822,98 @@ input,select,textarea{font-family:inherit;}
 @media(prefers-reduced-motion: reduce){
   .work-icon, .product-icon{animation:none;}
 }
+
+/* ============================================================
+   LIGHT SECTIONS — white, blue, yellow, breathing room (V2.2)
+   Dark was overused; alternating light keeps premium feel without heaviness.
+   ============================================================ */
+.section-light{
+  background:linear-gradient(180deg,#FFFFFF 0%,#F4F7FF 100%);
+  color:#0A1224;
+  border-top:1px solid #E6EBF5;
+  border-bottom:1px solid #E6EBF5;
+}
+.section-light .eyebrow{color:var(--re-blue);}
+.section-light .section-title{color:#0A1224;}
+.section-light .lead{color:#3B4A6B;}
+.section-light .better-card,
+.section-light .result-card,
+.section-light .qcheck,
+.section-light .stat,
+.section-light .quote,
+.section-light .aud,
+.section-light .faq-item,
+.section-light .step3,
+.section-light .info-card{
+  background:#FFFFFF;
+  border:1px solid #E1E8F5;
+  box-shadow:0 6px 24px rgba(15,23,48,.06);
+  color:#0A1224;
+}
+.section-light .better-card p,
+.section-light .result-card p,
+.section-light .qcheck p,
+.section-light .quote blockquote,
+.section-light .aud p,
+.section-light .faq-item p,
+.section-light .info-card p,
+.section-light .step3 p,
+.section-light .support-list li{color:#3B4A6B;}
+.section-light .aud.tenant{background:#FFF8E1;border-color:#F0D97A;}
+.section-light .ba.before{background:#F8FAFF;border-bottom:1px solid #E1E8F5;}
+.section-light .ba.after{background:#FFF8E1;}
+.section-light .ba li{border-color:#E6EBF5;}
+.section-light .stat strong,
+.section-light .result-card .r-metric{color:var(--re-blue);}
+.section-light .work-panel,
+.section-light .product-panel{
+  background:#FFFFFF;
+  border:1px solid #E1E8F5;
+  box-shadow:0 10px 36px rgba(15,23,48,.07);
+}
+.section-light .work-panel .work-info p,
+.section-light .product-info p{color:#3B4A6B;}
+.section-light .for-whom span{border-color:#CBD7EF;color:#2F4A7A;background:#F4F7FF;}
+.section-light .work-tags span{border-color:#CBD7EF;color:#2F4A7A;}
+.section-light .quote figcaption{color:#5A6B8C;}
+.section-light .quote figcaption strong{color:var(--re-yellow);}
+
+/* More air: larger section rhythm + card padding */
+.section{padding:144px 0;}
+.products-list{gap:72px;}
+.product-panel, .work-panel{padding:44px;}
+.better-grid, .results-grid, .quality-checks, .quotes, .audience-banner{gap:28px;}
+.card-grid{gap:24px;}
+.promise-strip{padding:22px 0;}
+
+/* Alpine tabs (product audience switcher) */
+.audience-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 10px;}
+.tab-btn{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:9px 16px;border-radius:999px;border:1px solid var(--re-line);color:var(--re-white-soft);
+  transition:background .25s,color .25s,border-color .25s;
+}
+.tab-btn:hover{border-color:var(--re-yellow);}
+.tab-btn.is-active{background:var(--re-yellow);color:#080B12;border-color:var(--re-yellow);font-weight:700;}
+.section-light .tab-btn{border-color:#CBD7EF;color:#2F4A7A;background:#FFFFFF;}
+.section-light .tab-btn.is-active{background:var(--re-navy);color:#FFFFFF;border-color:var(--re-navy);}
+.tab-panel ul{margin:6px 0 4px;}
+.tab-panel li{color:var(--re-white-soft);font-size:.92rem;padding:5px 0 5px 20px;position:relative;}
+.tab-panel li::before{content:'✓';position:absolute;left:0;color:var(--re-yellow);}
+.section-light .tab-panel li{color:#3B4A6B;}
+
+/* Nav dropdown Alpine state */
+.nav-drop-menu a{display:block;}
+
+/* Light-section polish: process / pricing / support on white */
+.section-light .t-step p{color:#3B4A6B;}
+.section-light .t-num,.section-light .price-list strong{color:var(--re-blue);}
+.section-light .price-list li{background:#FFFFFF;border-color:#E1E8F5;color:#0A1224;box-shadow:0 4px 16px rgba(15,23,48,.05);}
+.section-light .price-list li span{color:#3B4A6B;}
+.section-light .support-list li{border-color:#E6EBF5;color:#3B4A6B;}
+.section-light .btn-ghost{border-color:#CBD7EF;color:#1E3A6E;}
+.section-light .btn-ghost:hover{border-color:var(--re-blue);color:var(--re-blue);}
+.section-light .work-link{color:var(--re-blue);}
+.section-light .work-link-ext{color:#3B4A6B;}
+.section-light .work-cat,.section-light .product-cat{color:var(--re-blue);}
+.section-light .tab-panel li::before{color:var(--re-blue);}

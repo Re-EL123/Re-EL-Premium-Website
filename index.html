@@ -408,8 +408,8 @@
       <span>RE-EL</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <div class="nav-drop">
-        <a href="/products/" data-hover>Products ▾</a>
+      <div class="nav-drop" x-data="{ open: false }" @click.outside="open = false">
+        <a href="/products/" data-hover @click="open = false">Products ▾</a>
         <span class="nav-drop-menu">
           <a href="/products/clock-kit/" data-hover><small>Clock-Kit</small>Workforce Management</a>
           <a href="/products/laundromaster/" data-hover><small>LaundroMaster</small>Laundry Platform</a>
@@ -668,7 +668,7 @@
 
 
   <!-- ================= THE BETTER WORLD / VISION ================= -->
-  <section class="section section-dark" id="vision">
+  <section class="section section-light" id="vision">
     <div class="container">
       <p class="eyebrow" data-reveal>THE BETTER WORLD</p>
       <h2 class="section-title" data-reveal="split">Built to solve real problems.</h2>
@@ -683,7 +683,7 @@
     </div>
   </section>
   <!-- ================= PRODUCTS ================= -->
-  <section class="section section-dark" id="products">
+  <section class="section section-light" id="products">
     <div class="container">
       <p class="eyebrow" data-reveal>OUR PRODUCTS</p>
       <h2 class="section-title" data-reveal="split">Possibilities, built. Real products. Real systems.</h2>
@@ -698,7 +698,12 @@
             <h3>Clock-Kit</h3>
             <p class="work-cat">Workforce Management Platform</p>
             <p>A workforce attendance and clocking platform built to simplify shift tracking and reporting for teams.</p>
-            <div class="for-whom"><span>For Employers</span><span>For Employees</span></div>
+            <div class="audience-tabs" x-data="{ tab: 'employers' }">
+              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'employers' }" @click="tab = 'employers'">For Employers</button>
+              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'employees' }" @click="tab = 'employees'">For Employees</button>
+              <div class="tab-panel" x-show="tab === 'employers'"><ul><li>One dashboard across sites, hosts & teams</li><li>Live attendance + signed, billing-ready timesheets</li><li>Reports without spreadsheets</li></ul></div>
+              <div class="tab-panel" x-show="tab === 'employees'"><ul><li>Clock in from your phone in one tap</li><li>Location check + offline queue (PENDING SYNC)</li><li>Leave & shift schedules in one place</li></ul></div>
+            </div>
             <div class="work-tags"><span>JavaScript</span><span>React</span><span>Node.js</span><span>MongoDB</span></div>
             <div class="work-links">
               <a href="/work/clock-kit/" class="work-link" data-hover>Read the case study &rarr;</a>
@@ -768,7 +773,12 @@
             <h3>LaundroMaster</h3>
             <p class="product-cat">Connecting businesses with opportunities</p>
             <p>Find nearby laundromats, compare prices & turnaround, schedule pickup, pay securely, track every stage. Laundromats onboard as tenants. Live at laundromaster.re-el.co.za.</p>
-            <div class="for-whom"><span>For Tenants / Laundries</span><span>For Customers</span></div>
+            <div class="audience-tabs" x-data="{ tab: 'tenants' }">
+              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'tenants' }" @click="tab = 'tenants'">For Tenants</button>
+              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'customers' }" @click="tab = 'customers'">For Customers</button>
+              <div class="tab-panel" x-show="tab === 'tenants'"><ul><li>List services, prices & turnaround</li><li>Receive bookings + secure payments</li><li>Onboarding & support by Re-EL</li></ul></div>
+              <div class="tab-panel" x-show="tab === 'customers'"><ul><li>Find nearby laundromats, compare & book</li><li>Schedule pickup, track every stage</li><li>Free delivery for members</li></ul></div>
+            </div>
             <div class="dual-ctas">
               <a href="/products/laundromaster/" class="btn btn-primary btn-small" data-hover>View Product</a>
               <a href="https://laundromaster.re-el.co.za/apps/customer/" target="_blank" rel="noopener" class="work-link work-link-ext" data-hover>Open live app &rarr;</a>
@@ -788,7 +798,14 @@
             <h3>Re-EL ECD</h3>
             <p class="product-cat">Empowering early childhood development</p>
             <p>Enrolment, learners, curriculum, assessments, attendance, finance, safety & parent comms — one workspace for daycare centres. Live at ecd.re-el.co.za.</p>
-            <div class="for-whom"><span>For Centres</span><span>For Educators</span><span>For Parents</span></div>
+            <div class="audience-tabs" x-data="{ tab: 'centres' }">
+              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'centres' }" @click="tab = 'centres'">For Centres</button>
+              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'educators' }" @click="tab = 'educators'">For Educators</button>
+              <button type="button" class="tab-btn" :class="{ 'is-active': tab === 'parents' }" @click="tab = 'parents'">For Parents</button>
+              <div class="tab-panel" x-show="tab === 'centres'"><ul><li>Enrolment, fees & finance in one place</li><li>Attendance, staff & safety records</li><li>Parent comms without chaos</li></ul></div>
+              <div class="tab-panel" x-show="tab === 'educators'"><ul><li>Curriculum, assessments & class lists</li><li>Less admin, more teaching</li></ul></div>
+              <div class="tab-panel" x-show="tab === 'parents'"><ul><li>Your child's progress, attendance & updates</li></ul></div>
+            </div>
             <div class="dual-ctas">
               <a href="/products/re-el-ecd/" class="btn btn-primary btn-small" data-hover>View Product</a>
               <a href="https://ecd.re-el.co.za" target="_blank" rel="noopener" class="work-link work-link-ext" data-hover>Open live app &rarr;</a>
@@ -835,7 +852,7 @@
   </div>
 
   <!-- ================= RESULTS / OUTCOMES ================= -->
-  <section class="section section-dark" id="results">
+  <section class="section section-light" id="results">
     <div class="container">
       <p class="eyebrow" data-reveal>QUALITY RESULTS</p>
       <h2 class="section-title" data-reveal="split">Real products. Real results.</h2>
@@ -865,7 +882,7 @@
   </section>
 
   <!-- ================= SUPPORT PROMISE ================= -->
-  <section class="section" id="support-promise">
+  <section class="section section-light" id="support-promise">
     <div class="container support-grid">
       <div data-reveal>
         <p class="eyebrow">AFTER LAUNCH</p>
@@ -886,7 +903,7 @@
     </div>
   </section>
   <!-- ================= PROCESS ================= -->
-  <section class="section" id="process">
+  <section class="section section-light" id="process">
     <div class="container">
       <p class="eyebrow" data-reveal>HOW WE WORK</p>
       <h2 class="section-title" data-reveal="split">A clear process, from discovery to support.</h2>
@@ -988,7 +1005,7 @@
   </section>
 
   <!-- ================= PRICING TEASER ================= -->
-  <section class="section" id="pricing">
+  <section class="section section-light" id="pricing">
     <div class="container pricing-grid">
       <div data-reveal>
         <p class="eyebrow">INVESTMENT</p>
@@ -1006,7 +1023,7 @@
   </section>
 
   <!-- ================= FAQ ================= -->
-  <section class="section" id="faq">
+  <section class="section section-light" id="faq">
     <div class="container">
       <p class="eyebrow" data-reveal>COMMON QUESTIONS</p>
       <h2 class="section-title" data-reveal="split">Questions, answered.</h2>
@@ -1197,6 +1214,7 @@
 <script src="assets/js/vendor/SplitText-3.15.0.min.js" defer></script>
 <script src="assets/js/vendor/lenis-1.3.26.min.js" defer></script>
 <script src="assets/js/analytics.js" defer></script>
+<script src="assets/js/vendor/alpine.min.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/scene.js" defer></script>
 </body>

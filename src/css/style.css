@@ -1152,3 +1152,22 @@ input,select,textarea{font-family:inherit;}
 @media(max-width:1024px){
   .corp-hero{background-attachment:scroll;}
 }
+
+/* Motion graphics (V3.9) — badges, ken-burns, tilt targets */
+.corp-visual{overflow:visible;}
+.float-badge{
+  position:absolute;z-index:3;background:#FFFFFF;color:#0A1224;
+  font-family:var(--font-mono);font-size:.72rem;font-weight:700;letter-spacing:.08em;
+  padding:10px 16px;border-radius:999px;border:1px solid #E1E8F5;
+  box-shadow:0 12px 30px rgba(15,23,48,.18);
+  animation:heroFloat 5.5s ease-in-out infinite;
+}
+.badge-top{top:-16px;right:24px;}
+.badge-side{bottom:120px;left:-24px;animation-delay:1.2s;}
+@keyframes heroFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+.hero-photo{animation:kenburns 18s ease-in-out infinite alternate;will-change:transform;}
+@keyframes kenburns{from{transform:scale(1);}to{transform:scale(1.07);}}
+.svc,.proj{will-change:transform;transform-style:preserve-3d;}
+@media(prefers-reduced-motion: reduce){
+  .float-badge,.hero-photo{animation:none;}
+}

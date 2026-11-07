@@ -608,3 +608,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2800);
   }
 });
+
+/* ============================================================
+   MOTION GRAPHICS (V3.9) — tilt, parallax, magnetic (desktop)
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if (reduced) return;
+  const HAS_GSAP = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+  if (!HAS_GSAP) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Parallax: hero photo drifts slightly on scroll
+  const hp = document.querySelector('.hero-photo');
+  if (hp && !reduced) {
+    gsap.to(hp, {
+      yPercent: 6, ease: 'none',
+      scrollTrigger: { trigger: '.corp-hero', start: 'top top', end: 'bottom top', scrub: 1 }
+    });
+  }
+
+  // Parallax: corp-visual lifts in
+  const cv = document.querySelector('.corp-visual');
+  if (cv && fine && window.innerWidth > 1024) {
+    gsap.fromTo(cv, { y: 30 }, {
+      y: 0, ease: 'power3.out',
+      scrollTrigger: { trigger: '.corp-hero', start: 'top 80%', end: 'top 30%', scrub: 1 }
+    });
+  }
+
+  // Tilt: service + project cards (desktop only)
+  if (fine && window.innerWidth > 768) {
+    document.querySelectorAll('.svc, .proj').forEach(card => {
+      card.style.transformPerspective = '800px';
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        gsap.to(card, { rotateY: px * 6, rotateX: -py * 6, y: -4, duration: 0.4, ease: 'power2.out' });
+      });
+      card.addEventListener('pointerleave', () => {
+        gsap.to(card, { rotateY: 0, rotateX: 0, y: 0, duration: 0.5, ease: 'power3.out', clearProps: 'rotateX,rotateY' });
+      });
+    });
+  }
+
+  // Magnetic quote buttons (desktop only)
+  if (fine && window.innerWidth > 768) {
+    document.querySelectorAll('.btn-quote').forEach(btn => {
+      btn.addEventListener('pointermove', e => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        gsap.to(btn, { x: x * 0.25, y: y * 0.25, duration: 0.4, ease: 'power2.out' });
+      });
+      btn.addEventListener('pointerleave', () => {
+        gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1,0.5)' });
+      });
+    });
+  }
+
+  // Gentle entrance for floating badges (already CSS-animated; add pop-in on load)
+  const badges = document.querySelectorAll('.float-badge');
+  if (badges.length) {
+    gsap.fromTo(badges, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, stagger: 0.2, ease: 'back.out(2)', delay: 0.4 });
+  }
+});

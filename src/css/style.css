@@ -1198,3 +1198,12 @@ section.corp-hero > .container, section#pricing > .container{display:block;}
 @media(max-width:1024px){
   .corp-hero-grid,.pricing-grid{grid-template-columns:1fr;}
 }
+
+/* REVERT about section too (V3.6) — block + grid like hero/investment */
+section#about{display:block;}
+section#about > .container{display:block;}
+.corp-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.corp-about-grid > *{flex:none;}
+@media(max-width:1024px){
+  .corp-about-grid{grid-template-columns:1fr;}
+}

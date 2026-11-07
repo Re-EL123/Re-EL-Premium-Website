@@ -1113,3 +1113,65 @@ input,select,textarea{font-family:inherit;}
 @media(max-width:1024px){
   #faq{background-attachment:scroll;}
 }
+
+/* ============================================================
+   FLEXBOX STRUCTURE (V3.3) — cards + sections perfectly aligned
+   ============================================================ */
+/* Section rhythm: flex column so content + cards stack cleanly */
+section{display:flex;flex-direction:column;}
+section > .container{flex:1 1 auto;display:flex;flex-direction:column;}
+.corp-hero-grid{flex:1 1 auto;display:flex;gap:56px;align-items:center;}
+.corp-hero-grid > *{flex:1 1 0;min-width:0;}
+.corp-about-grid{flex:1 1 auto;display:flex;gap:56px;align-items:center;}
+.corp-about-grid > *{flex:1 1 0;min-width:0;}
+.pricing-grid{flex:1 1 auto;display:flex;gap:50px;align-items:center;}
+.pricing-grid > *{flex:1 1 0;min-width:0;}
+.contact-grid{flex:1 1 auto;display:flex;gap:60px;align-items:flex-start;}
+.contact-grid > *{flex:0 1 46%;min-width:0;}
+.contact-grid > *:last-child{flex:1 1 auto;}
+
+/* Cards: flex-wrap rows with even sizing + equal heights */
+.svc-grid,.proj-grid,.testi-grid,.blog-grid,.card-grid,.why-grid,
+.better-grid,.results-grid,.quality-checks,.quotes,.steps-3,
+.audience-banner,.faq-grid,.stats-row{
+  display:flex;flex-wrap:wrap;gap:24px;
+}
+.svc-grid > *, .card-grid > *, .faq-grid > *{flex:1 1 calc(33.333% - 16px);min-width:260px;}
+.proj-grid > *, .quotes > *{flex:1 1 calc(50% - 12px);min-width:300px;}
+.testi-grid > *, .blog-grid > *, .better-grid > *, .quality-checks > *,
+.steps-3 > *, .results-grid > *{flex:1 1 calc(33.333% - 16px);min-width:260px;}
+.audience-banner > *{flex:1 1 320px;min-width:0;}
+.stats-row > *{flex:1 1 calc(25% - 18px);min-width:170px;}
+.why-grid > *{flex:1 1 calc(33.333% - 16px);min-width:240px;}
+
+/* Card interiors: flex column so footer CTA pins at bottom */
+.svc,.proj,.blog-card,.testi,.faq-item,.info-card,.aud,
+.why-card,.better-card,.result-card,.qcheck,.quote,.step3{
+  display:flex;flex-direction:column;
+}
+.svc-body,.proj-body,.blog-body{flex:1 1 auto;display:flex;flex-direction:column;}
+.svc-body a,.proj-body a,.blog-body a{margin-top:auto;}
+
+/* Buttons + headers inside cards line up */
+.corp-actions,.hero-cta,.dual-ctas,.work-links{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+.team-row,.partner-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;}
+.work-panel,.product-panel{display:flex;gap:36px;align-items:center;flex-wrap:wrap;}
+.work-visual,.product-visual{flex:0 0 34%;min-width:240px;}
+.work-info,.product-info{flex:1 1 380px;min-width:0;}
+
+@media(max-width:1024px){
+  .corp-hero-grid,.corp-about-grid,.pricing-grid{flex-direction:column;gap:40px;}
+  .contact-grid{flex-direction:column;gap:40px;}
+  .contact-grid > *{flex:1 1 auto;width:100%;}
+  .svc-grid > *, .testi-grid > *, .blog-grid > *, .better-grid > *,
+  .quality-checks > *, .steps-3 > *, .results-grid > *, .why-grid > *,
+  .card-grid > *, .faq-grid > *{flex:1 1 calc(50% - 12px);}
+  .proj-grid > *{flex:1 1 100%;}
+  .work-visual,.product-visual{flex:1 1 100%;}
+}
+@media(max-width:640px){
+  .svc-grid > *, .testi-grid > *, .blog-grid > *, .better-grid > *,
+  .quality-checks > *, .steps-3 > *, .results-grid > *, .why-grid > *,
+  .card-grid > *, .faq-grid > *, .stats-row > *{flex:1 1 100%;min-width:0;}
+  .quotes > *{flex:1 1 100%;}
+}

@@ -879,6 +879,7 @@ PRODUCTS = [
         tenant_benefits=["Add shifts, staff and rules in one admin area","Trusted attendance records for payroll","Period reporting without manual exports","Onboarding and training for your team"],
         user_benefits=["Simple clock-in/out from any device","Clear personal attendance history","No paperwork, no queues"],
         steps=["Talk to Re-EL","We scope shifts, staff and rules","Team onboarding + go-live"],
+        logo="/assets/img/clock-kit-logo.svg",
         visual="pv-clock",
     ),
     dict(
@@ -897,6 +898,7 @@ PRODUCTS = [
         tenant_benefits=["Tenant storefront with services, pricing and availability","Bookings and payments handled in one flow","Discovery to customers in your area","Onboarding, training and ongoing support"],
         user_benefits=["Find nearby laundries and compare services","Book and pay without phone tag","Track order status"],
         steps=["Join as tenant (or as customer)","We set up your store / account","Go live and get bookings"],
+        logo="/assets/img/laundromaster-logo.png",
         visual="pv-laundry",
     ),
     dict(
@@ -933,6 +935,7 @@ PRODUCTS = [
         tenant_benefits=["Email on your domain (e.g. you@yourcompany.co.za)","Setup and migration handled","Ongoing support"],
         user_benefits=["Professional sender address","Works on any device"],
         steps=["Tell us your domain","We set up your mailboxes","Start sending"],
+        logo="/assets/img/mailer-mark.svg",
         visual="pv-clock",
     ),
 ]
@@ -951,6 +954,7 @@ def build_product(pr, all_products):
   <header class="page-hero container">
     <p class="eyebrow" data-reveal>PRODUCT · {esc(pr["cat"])}</p>
     <h1 data-reveal>{esc(pr["name"])}</h1>
+    {f'<img src="{pr["logo"]}" alt="{esc(pr["name"])} logo" style="height:64px;width:auto;object-fit:contain;margin:12px 0 4px;" loading="lazy" decoding="async" />' if pr.get("logo") else ""}
     <p class="lead" data-reveal>{esc(pr["summary"])}</p>
     <div class="hero-tags" data-reveal>{tags}</div>
     <div class="dual-ctas" data-reveal>

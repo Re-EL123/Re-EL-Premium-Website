@@ -1306,3 +1306,13 @@ input,select,textarea{font-family:inherit;}
 @media(max-width:640px){
   .orbit-card{width:240px;margin-left:-120px;}
 }
+
+/* MOTION POSTER for SERVICES (V3.15) — continuous marquee */
+.poster-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 48px,#000 calc(100% - 48px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 48px,#000 calc(100% - 48px),transparent 100%);}
+.poster-track{display:flex;gap:24px;width:max-content;animation:posterMarquee 28s linear infinite;}
+.poster-wrap:hover .poster-track{animation-play-state:paused;}
+.poster-track > .svc{flex:0 0 340px;max-width:85vw;}
+@keyframes posterMarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media(prefers-reduced-motion: reduce){
+  .poster-track{animation:none;transform:none;}
+}

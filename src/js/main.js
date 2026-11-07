@@ -806,3 +806,13 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 window.addEventListener('load', () => {
   if (!location.hash) window.scrollTo(0, 0);
 });
+
+/* MOTION POSTER duplicate track for seamless loop (V3.15) */
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('#posterTrack');
+  if (track && !track.dataset.cloned) {
+    track.dataset.cloned = '1';
+    track.innerHTML += track.innerHTML;
+    track.querySelectorAll('[data-reveal]').forEach(el => { el.removeAttribute('data-reveal'); el.style.opacity = ''; });
+  }
+});

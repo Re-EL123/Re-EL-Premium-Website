@@ -1143,3 +1143,12 @@ input,select,textarea{font-family:inherit;}
 #results .stat strong, .corp-testimonials .stat strong{color:#1E3A6E;}
 #results .stat span, .corp-testimonials .stat span{color:#5A6B8C;}
 #results .stat [data-count], .corp-testimonials .stat [data-count]{color:inherit;}
+
+/* Hero textured background (adrien-olichon) under white wash */
+.corp-hero{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.9) 0%,rgba(244,247,255,.88) 100%),url("/assets/img/bg-contact.jpg");
+  background-size:cover;background-position:center;background-attachment:fixed;
+}
+@media(max-width:1024px){
+  .corp-hero{background-attachment:scroll;}
+}

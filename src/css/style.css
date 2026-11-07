@@ -1195,3 +1195,24 @@ input,select,textarea{font-family:inherit;}
 .nav-drop-menu a{color:#0A1224;}
 .nav-drop-menu a small{color:#2F5EBB;}
 .nav-drop-menu a:hover{background:#FFF8E1;}
+
+/* SERVICES carousel (V3.11) — swipeable, snap, arrows + dots */
+.svc-grid{
+  display:flex;flex-wrap:nowrap;overflow-x:auto;gap:24px;
+  scroll-snap-type:x mandatory;padding:8px 4px 24px;
+  scrollbar-width:thin;scrollbar-color:#D6AE01 transparent;
+}
+.svc-grid > .svc{flex:0 0 340px;max-width:85vw;scroll-snap-align:start;}
+.svc-grid::-webkit-scrollbar{height:6px;}
+.svc-grid::-webkit-scrollbar-thumb{background:#D6AE01;border-radius:3px;}
+.svc-nav{display:flex;gap:10px;align-items:center;margin-top:4px;}
+.carousel-btn{
+  width:46px;height:46px;border-radius:50%;border:1px solid #CBD7EF;background:#FFFFFF;
+  color:#1E3A6E;font-size:1.2rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;
+  transition:background .25s,border-color .25s,color .25s,transform .2s;cursor:pointer;
+}
+.carousel-btn:hover{background:#1E3A6E;color:#FFFFFF;border-color:#1E3A6E;transform:translateY(-2px);}
+.carousel-btn:focus-visible{outline:2px solid #D6AE01;outline-offset:2px;}
+.carousel-dots{display:flex;gap:8px;margin-left:10px;}
+.carousel-dot{width:9px;height:9px;border-radius:50%;background:#CBD7EF;transition:background .25s,transform .25s;}
+.carousel-dot.is-active{background:#D6AE01;transform:scale(1.35);}

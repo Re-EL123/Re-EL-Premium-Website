@@ -675,3 +675,29 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.fromTo(badges, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, stagger: 0.2, ease: 'back.out(2)', delay: 0.4 });
   }
 });
+
+/* SERVICES CAROUSEL (V3.11) — arrows, dots, scroll tracking */
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.querySelector('.svc-grid');
+  const prev = document.querySelector('#svcPrev');
+  const next = document.querySelector('#svcNext');
+  const dotsBox = document.querySelector('#svcDots');
+  if (!grid) return;
+  const cards = Array.from(grid.children);
+  // Build dots
+  cards.forEach(() => {
+    const d = document.createElement('span');
+    d.className = 'carousel-dot';
+    dotsBox.appendChild(d);
+  });
+  const dots = Array.from(dotsBox.children);
+  const cardStep = () => (cards[0] ? cards[0].offsetWidth + 24 : 360);
+  const syncDots = () => {
+    const idx = Math.round(grid.scrollLeft / cardStep());
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+  };
+  syncDots();
+  grid.addEventListener('scroll', () => requestAnimationFrame(syncDots), { passive: true });
+  if (prev) prev.addEventListener('click', () => grid.scrollBy({ left: -cardStep(), behavior: 'smooth' }));
+  if (next) next.addEventListener('click', () => grid.scrollBy({ left: cardStep(), behavior: 'smooth' }));
+});

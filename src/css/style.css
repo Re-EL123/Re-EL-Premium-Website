@@ -1036,3 +1036,55 @@ input,select,textarea{font-family:inherit;}
 .mobile-menu-footer{border-color:#E6EBF5;color:#3B4A6B;}
 .mobile-menu-footer a{color:#1E3A6E;}
 .mobile-menu-footer p{color:#0A1224;}
+
+/* ============================================================
+   COLOR CONSISTENCY FIX (V3.2) — every light section: dark text,
+   white cards, blue accents, yellow only for CTAs/markers.
+   ============================================================ */
+.corp-hero, .team-strip, .corp-services, .corp-projects, .corp-about,
+.corp-partners, .corp-testimonials, .corp-blog, .cta-section.section-light,
+.section-light{
+  --ink:#0A1224;
+  --ink-soft:#3B4A6B;
+  --line-lt:#E1E8F5;
+  background-color:#FFFFFF;
+  color:var(--ink);
+}
+.corp-services, .corp-about, .corp-testimonials{background-color:#F7F9FF;}
+/* Eyebrows: yellow is unreadable on white — use blue */
+.corp-hero .eyebrow, .team-strip .eyebrow, .corp-services .eyebrow,
+.corp-projects .eyebrow, .corp-about .eyebrow, .corp-partners .eyebrow,
+.corp-testimonials .eyebrow, .corp-blog .eyebrow, .cta-section.section-light .eyebrow{
+  color:#2F5EBB;
+}
+/* Headings + body copy on light */
+.corp-hero h1, .team-strip h2, .corp-services h2, .corp-projects h2,
+.corp-about h2, .corp-partners h2, .corp-testimonials h2, .corp-blog h2,
+.cta-section.section-light h2, .section-light .section-title,
+.section-light h1, .section-light h2, .section-light h3{color:#0A1224;}
+.corp-hero .corp-sub, .team-strip .lead, .corp-services .lead,
+.corp-projects .lead, .corp-about p, .cta-section.section-light p,
+.section-light .lead, .section-light .t-step p{color:#3B4A6B;}
+/* Ghost buttons on light: navy outline instead of white */
+.corp-hero .btn-ghost, .corp-about .btn-ghost, .cta-section.section-light .btn-ghost,
+.section-light .btn-ghost{border-color:#1E3A6E;color:#1E3A6E;background:transparent;}
+.corp-hero .btn-ghost:hover, .corp-about .btn-ghost:hover,
+.cta-section.section-light .btn-ghost:hover, .section-light .btn-ghost:hover{
+  border-color:#2F5EBB;color:#2F5EBB;
+}
+/* CTA on light: remove dark radial wash */
+.cta-section.section-light{background:linear-gradient(180deg,#FFFFFF 0%,#FFF8E1 100%);}
+/* Contact form on light: white inputs, dark labels */
+.section-light .contact-form label{color:#3B4A6B;}
+.section-light .contact-form input,
+.section-light .contact-form select,
+.section-light .contact-form textarea{
+  background:#FFFFFF;border-color:#CBD7EF;color:#0A1224;
+}
+.section-light .contact-form input::placeholder,
+.section-light .contact-form textarea::placeholder{color:#8A9BB8;}
+.section-light .contact-form option{background:#FFFFFF;color:#0A1224;}
+/* Contact meta links on light */
+.section-light .contact-meta a{color:#1E3A6E;}
+.section-light .contact-meta a:hover{color:#2F5EBB;}
+/* Image-top pattern (navy/blue) already yellow-on-navy — no change */

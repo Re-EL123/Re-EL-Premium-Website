@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- HERO WORD CYCLE ---------- */
   const wordEl = $('#wordCycle');
   if(wordEl && canAnimate){
-    const words = ['forward','faster','smarter','connected','transformed'];
+    const words = ['we can build','we can scale','we can support','we can grow','we can transform'];
 
     /* The words differ in width, and the line is centre-aligned, so swapping
        them nudges the full stop sideways — a layout shift on every tick.
@@ -555,5 +555,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     giant.addEventListener('mouseenter', () => tl.play());
     giant.addEventListener('mouseleave', () => tl.reverse());
+  }
+});
+
+/* V2 additions — appended: counters, scarab CTA, contextual WhatsApp */
+document.addEventListener('DOMContentLoaded', () => {
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const HAS_GSAP = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+  const reduced = motionQuery.matches;
+  // Counters
+  const counters = document.querySelectorAll('[data-count]');
+  if (counters.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        const target = parseFloat(e.target.getAttribute('data-count'));
+        const suffix = e.target.getAttribute('data-suffix') || '';
+        if (reduced || !HAS_GSAP) { e.target.textContent = target + suffix; return; }
+        const obj = { v: 0 };
+        gsap.to(obj, { v: target, duration: 1.6, ease: 'power3.out', onUpdate() { e.target.textContent = Math.round(obj.v) + suffix; } });
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(c => io.observe(c));
+  } else {
+    counters.forEach(c => { c.textContent = c.getAttribute('data-count') + (c.getAttribute('data-suffix')||''); });
+  }
+  // Scarab CTA reveal
+  const scarab = document.querySelector('.scarab-cta');
+  if (scarab && 'IntersectionObserver' in window) {
+    const so = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { scarab.classList.add('is-in'); so.unobserve(scarab); } });
+    }, { threshold: 0.35 });
+    so.observe(scarab);
+  } else if (scarab) scarab.classList.add('is-in');
+  // Contextual WhatsApp: any link with data-wa-msg
+  document.querySelectorAll('[data-wa-msg]').forEach(a => {
+    const msg = a.getAttribute('data-wa-msg');
+    if (msg) a.href = `https://wa.me/27813864024?text=${encodeURIComponent(msg)}`;
+  });
+  // Product hero word: keep word-cycle but also cycle product nouns on [data-product-cycle]
+  const pc = document.querySelector('[data-product-cycle]');
+  if (pc && HAS_GSAP && !reduced) {
+    const words = ['workforce','laundries','ECD centres','businesses'];
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % words.length;
+      gsap.timeline()
+        .to(pc, { opacity: 0, y: -8, duration: 0.25 })
+        .call(() => { pc.textContent = words[i]; })
+        .fromTo(pc, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25 });
+    }, 2800);
   }
 });

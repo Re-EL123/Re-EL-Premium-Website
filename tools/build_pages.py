@@ -797,6 +797,210 @@ def build_404():
     return doc
 
 
+
+# --------------------------------------------------------------------------
+# Products (V2 — Better World)
+# --------------------------------------------------------------------------
+PRODUCTS = [
+    dict(
+        slug="clock-kit", name="Clock-Kit",
+        cat="Transforming workforce management",
+        title="Clock-Kit — Workforce Management Platform | Re-EL",
+        desc="Clock-Kit is a Re-EL workforce attendance and clocking platform. Employers onboard teams; employees clock in/out and managers get trusted reporting.",
+        summary="A workforce attendance and clocking platform built to simplify shift tracking and reporting for teams.",
+        stack=["JavaScript","React","Node.js","MongoDB"],
+        audiences=["For Employers","For Employees"],
+        tenant_cta="I want Clock-Kit for my team (employer).",
+        user_cta="I am an employee/staff and want to join Clock-Kit.",
+        live="https://www.clock-kit.rf.gd/",
+        problem="Manual registers, chats and spreadsheets lose hours every pay cycle and put payroll at risk.",
+        solution="Clock-Kit gives teams a clear, low-friction clock-in/out record, then turns it into period reporting managers can act on.",
+        tenant_benefits=["Add shifts, staff and rules in one admin area","Trusted attendance records for payroll","Period reporting without manual exports","Onboarding and training for your team"],
+        user_benefits=["Simple clock-in/out from any device","Clear personal attendance history","No paperwork, no queues"],
+        steps=["Talk to Re-EL","We scope shifts, staff and rules","Team onboarding + go-live"],
+        visual="pv-clock",
+    ),
+    dict(
+        slug="laundromaster", name="LaundroMaster",
+        cat="Connecting businesses with opportunities",
+        title="LaundroMaster — Laundry Platform for Tenants & Customers | Re-EL",
+        desc="LaundroMaster connects laundry businesses as tenants with customers who book and pay. Re-EL — a better tomorrow, naturally.",
+        summary="The laundry platform connecting laundry businesses with customers — bookings, payments and discovery in one place.",
+        stack=["React","Node.js","Payments","Marketplace"],
+        audiences=["For Tenants / Laundries","For Customers"],
+        tenant_cta="I own a laundry and want to join LaundroMaster as a tenant.",
+        user_cta="I want to use LaundroMaster as a customer.",
+        live="",
+        problem="Laundries depend on walk-ins and phone calls; customers can't discover, compare or book nearby providers in one place.",
+        solution="LaundroMaster onboards laundries as tenants who list services and receive bookings, while customers find, book and pay nearby providers.",
+        tenant_benefits=["Tenant storefront with services, pricing and availability","Bookings and payments handled in one flow","Discovery to customers in your area","Onboarding, training and ongoing support"],
+        user_benefits=["Find nearby laundries and compare services","Book and pay without phone tag","Track order status"],
+        steps=["Join as tenant (or as customer)","We set up your store / account","Go live and get bookings"],
+        visual="pv-laundry",
+    ),
+    dict(
+        slug="re-el-ecd", name="Re-EL ECD",
+        cat="Empowering early childhood development",
+        title="Re-EL ECD — Early Childhood Development Platform | Re-EL",
+        desc="Re-EL ECD helps ECD centres, educators and parents with enrolment, records and communication — empowering early childhood development.",
+        summary="Early childhood development software for ECD centres, educators and parents — less admin, more time for children.",
+        stack=["React","Node.js","Records","Communication"],
+        audiences=["For Centres","For Educators","For Parents"],
+        tenant_cta="I run an ECD centre and want to onboard to Re-EL ECD.",
+        user_cta="I am an educator/parent and want to join Re-EL ECD.",
+        live="",
+        problem="ECD centres juggle enrolment, attendance, records and parent updates across paper, chats and spreadsheets.",
+        solution="Re-EL ECD brings enrolment, records and parent communication into one trusted place, so educators focus on children's development.",
+        tenant_benefits=["Centre admin: enrolment, staff and groups","Records that stay organised and retrievable","Parent communication in one place","Training for educators and admin"],
+        user_benefits=["Educators: less admin, clearer records","Parents: stay informed on your child's progress"],
+        steps=["Onboard your centre","We configure rooms, staff and enrolment","Go live with parent access"],
+        visual="pv-ecd",
+    ),
+]
+
+def build_product(pr, all_products):
+    path = f"/products/{pr['slug']}/"
+    trail = [("Products", "/products/"), (pr["name"], path)]
+    tags = "".join(f"<span>{esc(t)}</span>" for t in pr["stack"])
+    tenant_li = "\n".join(f"        <li>{esc(b)}</li>" for b in pr["tenant_benefits"])
+    user_li = "\n".join(f"        <li>{esc(b)}</li>" for b in pr["user_benefits"])
+    steps = "\n".join(f"        <div class=\"step3\" data-reveal><span class=\"s-num\">0{i+1}</span><h3>{esc(s.split(' — ')[0].split(' (')[0])}</h3><p>{esc(s)}</p></div>" for i, s in enumerate(pr["steps"]))
+    others = [(o["name"], o["summary"], f"/products/{o['slug']}/") for o in all_products if o["slug"] != pr["slug"]]
+    live_link = f'<a href="{pr["live"]}" target="_blank" rel="noopener" class="btn btn-primary btn-small" data-hover>Visit live product</a>' if pr["live"] else ""
+    body = f"""<main id="main">
+{crumbs(trail)}
+  <header class="page-hero container">
+    <p class="eyebrow" data-reveal>PRODUCT · {esc(pr["cat"])}</p>
+    <h1 data-reveal>{esc(pr["name"])}</h1>
+    <p class="lead" data-reveal>{esc(pr["summary"])}</p>
+    <div class="hero-tags" data-reveal>{tags}</div>
+    <div class="dual-ctas" data-reveal>
+      <a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, {esc(pr["tenant_cta"])}" class="btn btn-primary" data-hover>Join as Business / Tenant</a>
+      <a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, {esc(pr["user_cta"])}" class="btn btn-ghost" data-hover>Join as User</a>
+    </div>
+  </header>
+  <section class="section section-dark">
+    <div class="container prose">
+      <h2 data-reveal>The problem</h2>
+      <p data-reveal>{esc(pr["problem"])}</p>
+      <h2 data-reveal>The Re-EL solution</h2>
+      <p data-reveal>{esc(pr["solution"])}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" data-reveal>WHO IT'S FOR</p>
+      <h2 class="section-title" data-reveal="split">Built for both sides of the platform.</h2>
+      <div class="audience-banner">
+        <div class="aud tenant" data-reveal><h3>Businesses &amp; tenants</h3><ul>{tenant_li}</ul><a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, {esc(pr["tenant_cta"])}" class="btn btn-primary btn-small" data-hover>Onboard my organisation</a></div>
+        <div class="aud" data-reveal><h3>Users, staff &amp; families</h3><ul>{user_li}</ul><a href="https://wa.me/27813864024" data-wa-msg="Hi Re-EL, {esc(pr["user_cta"])}" class="btn btn-ghost btn-small" data-hover>Get access</a></div>
+      </div>
+      <div class="steps-3">{steps}</div>
+    </div>
+  </section>
+  <section class="section section-dark">
+    <div class="container">
+      <p class="eyebrow" data-reveal>MORE PRODUCTS</p>
+      <h2 class="section-title" data-reveal="split">Possibilities, built.</h2>
+      {cards([("Product", n, s, h) for n, s, h in others])}
+    </div>
+  </section>
+  <section class="cta-section page-cta scarab-cta">
+    <div class="container">
+      <h2 data-reveal>Imagine what we can build.</h2>
+      <p data-reveal>A better tomorrow. Naturally.</p>
+      <svg class="scarab-line" viewBox="0 0 720 80" aria-hidden="true" focusable="false"><path d="M20,65 C120,10 220,75 360,40 C500,10 600,70 700,30"/></svg>
+      <p class="scarab-flow"><span>IDEA</span><b>&rarr;</b><span>DESIGN</span><b>&rarr;</b><span>CODE</span><b>&rarr;</b><span>SYSTEM</span><b>&rarr;</b><span>IMPACT</span></p>
+      <div class="hero-cta" data-reveal>
+        <a href="/#contact" class="btn btn-primary" data-hover>Start a Project</a>
+        <a href="/products/" class="btn btn-ghost" data-hover>All products</a>
+      </div>
+    </div>
+  </section>
+</main>"""
+    ld = [
+        breadcrumb_ld(path, trail),
+        {"@type": "SoftwareApplication", "@id": f"{SITE}{path}#app", "name": pr["name"], "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "creator": {"@id": SITE + "/#organization"}, "description": pr["summary"], "url": (pr["live"] if pr["live"] else SITE + path)},
+    ]
+    return page(path, pr["title"], pr["desc"], body, ld)
+
+def build_products_index():
+    path = "/products/"
+    trail = [("Products", path)]
+    rows = cards([("Product", pr["name"], pr["summary"], f"/products/{pr['slug']}/") for pr in PRODUCTS])
+    body = f"""<main id="main">
+{crumbs(trail)}
+  <header class="page-hero container">
+    <p class="eyebrow" data-reveal>OUR PRODUCTS</p>
+    <h1 data-reveal>Products</h1>
+    <p class="lead" data-reveal>Imagine a better world. Now imagine what we can build — Clock-Kit, LaundroMaster and Re-EL ECD. Every product is a step towards something better.</p>
+  </header>
+  <section class="section section-dark">
+    <div class="container">
+      <p class="eyebrow" data-reveal>POSSIBILITIES, BUILT</p>
+      <h2 class="section-title" data-reveal="split">Real products. Real systems.</h2>
+      {rows}
+    </div>
+  </section>
+  <section class="cta-section page-cta">
+    <div class="container">
+      <h2 data-reveal>Not sure which product you need?</h2>
+      <p data-reveal>Describe the problem and we will scope it.</p>
+      <div class="hero-cta" data-reveal>
+        <a href="/#contact" class="btn btn-primary" data-hover>Talk to Re-EL</a>
+        <a href="/#contact" class="btn btn-ghost" data-hover>Start a Project</a>
+      </div>
+    </div>
+  </section>
+</main>"""
+    ld = [
+        breadcrumb_ld(path, trail),
+        {"@type": "CollectionPage", "@id": f"{SITE}{path}#collection", "name": "Re-EL products", "isPartOf": {"@id": SITE + "/#website"}},
+    ]
+    return page(path, "Products — Clock-Kit, LaundroMaster, Re-EL ECD | Re-EL", "Re-EL products: Clock-Kit workforce management, LaundroMaster laundry marketplace, and Re-EL ECD early childhood development.", body, ld)
+
+def build_results():
+    path = "/results/"
+    trail = [("Results", path)]
+    body = f"""<main id="main">
+{crumbs(trail)}
+  <header class="page-hero container">
+    <p class="eyebrow" data-reveal>QUALITY RESULTS</p>
+    <h1 data-reveal>Results</h1>
+    <p class="lead" data-reveal>We don't just build technology. We build possibilities — then we prove they work. Quality measured in outcomes, not adjectives.</p>
+  </header>
+  <section class="section section-dark">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat" data-reveal><strong><span data-count="99" data-suffix="%+">0</span></strong><span>Uptime target</span></div>
+        <div class="stat" data-reveal><strong><span data-count="48" data-suffix="h">0</span></strong><span>Support response</span></div>
+        <div class="stat" data-reveal><strong><span data-count="100" data-suffix="%">0</span></strong><span>Custom-built</span></div>
+        <div class="stat" data-reveal><strong><span data-count="7" data-suffix="-step">0</span></strong><span>Discovery to support</span></div>
+      </div>
+      <div class="results-grid">
+        <article class="result-card" data-reveal><div class="r-metric">Clock-Kit</div><h3>Attendance you can trust</h3><p>Structured clock-in/out, period reporting, payroll from a complete record.</p></article>
+        <article class="result-card" data-reveal><div class="r-metric">LaundroMaster</div><h3>Tenants + customers</h3><p>Laundry tenants onboarded, customers booking and paying in one flow.</p></article>
+        <article class="result-card" data-reveal><div class="r-metric">Re-EL ECD</div><h3>Centres that thrive</h3><p>Enrolment, records and parent communication — less admin, more development.</p></article>
+        <article class="result-card" data-reveal><div class="r-metric">Standard</div><h3>Tested, accessible, supported</h3><p>Quality process from discovery to continuous improvement.</p></article>
+      </div>
+      <div class="before-after" data-reveal>
+        <div class="ba before"><h4>Before Re-EL</h4><ul><li>Paper, chats and spreadsheets</li><li>Manual reporting every cycle</li><li>Disconnected tools</li><li>No support after launch</li></ul></div>
+        <div class="ba after"><h4>With Re-EL</h4><ul><li>Structured records and reporting</li><li>Automated, connected workflows</li><li>Designed around real users</li><li>Ongoing support and training</li></ul></div>
+      </div>
+      <p data-reveal style="margin-top:32px;"><a class="work-link" href="/products/">Explore products &rarr;</a> <a class="work-link work-link-ext" href="/work/">Custom builds &rarr;</a></p>
+    </div>
+  </section>
+  <section class="cta-section page-cta scarab-cta">
+    <div class="container">
+      <h2 data-reveal>Imagine what we can build.</h2>
+      <p data-reveal>A better tomorrow. Naturally.</p>
+      <div class="hero-cta" data-reveal><a href="/#contact" class="btn btn-primary" data-hover>Start a Project</a></div>
+    </div>
+  </section>
+</main>"""
+    ld = [breadcrumb_ld(path, trail), {"@type": "CollectionPage", "@id": f"{SITE}{path}#collection", "name": "Re-EL results"}]
+    return page(path, "Results & Quality Standards | Re-EL", "Re-EL quality results: outcomes, quality standards, support SLAs and proof across Clock-Kit, LaundroMaster and Re-EL ECD.", body, ld)
+
 def build_service_icon_map():
     """`<h3>Name</h3>` -> preceding inline SVG, shared by every service page."""
     return {m.group(2): m.group(1)
@@ -804,17 +1008,20 @@ def build_service_icon_map():
 
 
 
-TODAY = "2026-10-07"
+TODAY = "2026-11-07"
 
 
 def build_sitemap():
     """Regenerate sitemap.xml from the page list. Utility pages are excluded."""
-    urls = [(f"/", "1.0", "monthly", "2026-10-06"),
+    urls = [(f"/", "1.0", "monthly", "2026-11-07"),
+            ("/products/", "0.95", "monthly", TODAY),
+            ("/results/", "0.9", "monthly", TODAY),
             ("/services/", "0.9", "monthly", TODAY),
             ("/work/", "0.9", "monthly", TODAY),
             ("/insights/", "0.8", "weekly", TODAY)]
     urls += [(f"/services/{x['slug']}/", "0.8", "monthly", TODAY) for x in SERVICES]
     urls += [(f"/work/{x['slug']}/", "0.7", "yearly", TODAY) for x in WORK]
+    urls += [(f"/products/{x['slug']}/", "0.9", "monthly", TODAY) for x in PRODUCTS]
     urls += [(f"/insights/{x['slug']}/", "0.6", "yearly", TODAY) for x in POSTS]
 
     rows = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
@@ -834,7 +1041,10 @@ def build_sitemap():
 
 def main():
     build_service_icon_map()
-    out = [build_services_index()]
+    out = [build_products_index(), build_results()]
+    for pr in PRODUCTS:
+        out.append(build_product(pr, PRODUCTS))
+    out.append(build_services_index())
     for s in SERVICES:
         out.append(build_service(s, SERVICES))
     out.append(build_work_index())

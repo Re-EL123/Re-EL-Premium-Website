@@ -1014,3 +1014,25 @@ input,select,textarea{font-family:inherit;}
 @media(max-width:640px){
   .svc-grid,.testi-grid,.blog-grid{grid-template-columns:1fr;}
 }
+
+/* ============================================================
+   CORPORATE NAV + MOBILE MENU — light to match template (V3.1)
+   ============================================================ */
+.nav{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid #E6EBF5;}
+.nav.scrolled{background:rgba(255,255,255,.96);border-bottom:1px solid rgba(214,174,1,.35);box-shadow:0 8px 28px rgba(15,23,48,.07);}
+.nav-logo{color:#0A1224;}
+.nav-logo .brand-mark{background:#0F1730;border-radius:8px;padding:2px;}
+.nav-links a{color:#3B4A6B;}
+.nav-links a:hover,.nav-links a.is-active{color:#0A1224;}
+.nav-drop-menu a{color:#3B4A6B;}
+.nav-drop-menu a small{color:#1E3A6E;}
+.nav-drop-menu a:hover{background:#FFF8E1;color:#0A1224;}
+.menu-btn span{background:#0A1224;}
+
+/* Mobile menu — light to match */
+.mobile-menu{background:#FFFFFF;}
+.mobile-menu nav a{color:#0A1224;}
+.mobile-menu nav a:hover,.mobile-menu nav a:focus-visible{color:#B89301;}
+.mobile-menu-footer{border-color:#E6EBF5;color:#3B4A6B;}
+.mobile-menu-footer a{color:#1E3A6E;}
+.mobile-menu-footer p{color:#0A1224;}

@@ -1184,3 +1184,17 @@ section > .container{flex:1 1 auto;display:flex;flex-direction:column;}
 @media(max-width:1024px){
   .corp-hero-grid,.pricing-grid{grid-template-columns:1fr;}
 }
+
+/* ============================================================
+   FULL REVERT hero + INVESTMENT section elements (V3.5)
+   Kill the Flexbox section wrappers too — back to block + grid.
+   ============================================================ */
+section.corp-hero, section#pricing{display:block;}
+section.corp-hero > .container, section#pricing > .container{display:block;}
+.corp-hero-grid, .pricing-grid{display:grid;}
+.corp-hero-grid > *, .pricing-grid > *{flex:none;}
+.corp-hero-grid{grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;}
+.pricing-grid{grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+@media(max-width:1024px){
+  .corp-hero-grid,.pricing-grid{grid-template-columns:1fr;}
+}
